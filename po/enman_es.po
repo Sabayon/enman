@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR "mudler"
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# necrose99 <mike@michaellawrenceit.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: enman\n"
+"Report-Msgid-Bugs-To: mudler@sabayon.org\n"
+"POT-Creation-Date: 2015-04-09 12:29+0200\n"
+"PO-Revision-Date: 2015-04-06 17:51+0000\n"
+"Last-Translator: necrose99 <mike@michaellawrenceit.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/enman/language/"
+"es/)\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/App/enman/Command/add.pm:10 lib/App/enman/Command/list.pm:9
+#: lib/App/enman/Command/remove.pm:9
+msgid "You must run enman with root permissions"
+msgstr "Debe ejecutar enman con permisos de root"
+
+#: lib/App/enman/Command/add.pm:13
+#, fuzzy, perl-brace-format
+msgid "Repository '{repository}' already present in your system"
+msgstr ""
+"No hay ningún repositorio 'repositorio de {repository}' instalado en su "
+"sistema"
+
+#: lib/App/enman/Command/add.pm:21
+msgid "You must supply the repository name"
+msgstr ""
+
+#: lib/App/enman/Command/add.pm:27
+#, perl-brace-format
+msgid "'{repository}' repository matches more than one:"
+msgstr "más de uno coincide con '{repository}'  repositorio:"
+
+#: lib/App/enman/Command/add.pm:33 lib/App/enman/Command/search.pm:26
+#, perl-brace-format
+msgid "Repository: {repository}"
+msgstr "Repositorio: {repository}"
+
+#: lib/App/enman/Command/add.pm:39 lib/App/enman/Command/search.pm:29
+#, perl-brace-format
+msgid "Configuration file: {config}"
+msgstr "Archivo de configuración: {config}"
+
+#: lib/App/enman/Command/add.pm:48
+#, perl-brace-format
+msgid "No matches for '{repository}'"
+msgstr "No hay partidos para  '{repository}'"
+
+#: lib/App/enman/Command/add.pm:53
+#, perl-brace-format
+msgid "Installing '{repository}' in your system"
+msgstr "Instalación de '{repository}' en el sistema"
+
+#: lib/App/enman/Command/add.pm:61
+#, perl-brace-format
+msgid "cannot write the repository file: {error}"
+msgstr "No se puede escribir el archivo del repositorio: {error}"
+
+#: lib/App/enman/Command/add.pm:64
+msgid "Now you are ready to go do an 'equo up' to sync the repository"
+msgstr ""
+
+#: lib/App/enman/Command/list.pm:13
+msgid "Repositories available in your system: "
+msgstr "Repositorios disponibles en el sistema: "
+
+#: lib/App/enman/Command/list.pm:20
+msgid "No repositories were installed with enman"
+msgstr "No hay repositorios se instalaron con enman"
+
+#: lib/App/enman/Command/list.pm:24
+msgid ""
+"Repositories enabled with enman: (so you can remove it with enman <name>)"
+msgstr ""
+"Repositorios habilitados con enman: (por lo que se puede quitar con enman "
+"<name>)"
+
+#: lib/App/enman/Command/remove.pm:16
+#, perl-brace-format
+msgid "removing '{repo_name}' - '{repository}'"
+msgstr "extraer '{repo_name}' - '{repository}'"
+
+#: lib/App/enman/Command/remove.pm:25
+#, perl-brace-format
+msgid "There is no repository '{repository}' installed in your system"
+msgstr ""
+"No hay ningún repositorio 'repositorio de {repository}' instalado en su "
+"sistema"
+
+#: lib/App/enman/Command/search.pm:12
+#, perl-brace-format
+msgid "Searching '{query}' on the enman db..."
+msgstr "Buscar '{query}' en el db enman..."
+
+#: lib/App/enman/Command/search.pm:15
+#, perl-brace-format
+msgid "No matches for '{query}'"
+msgstr "No hay partidos para '{query}'"
+
+#: lib/App/enman/Command/search.pm:18
+#, perl-brace-format
+msgid "{matches} results for {query}"
+msgstr "resultados {matches} para consulta de {query}"

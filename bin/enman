@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+# PODNAME: enman
+use App::enman;
+App::enman->run;
