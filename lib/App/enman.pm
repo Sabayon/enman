@@ -7,7 +7,7 @@ use constant ETPREPO_DIR => $ENV{ETPREPO_DIR}
 use constant ENMAN_DB => $ENV{ENMAN_DB}
     || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "0.6";
+our $VERSION = "0.7";
 
 1;
 __END__
@@ -59,4 +59,3 @@ it under the same terms as Perl itself.
 mudler E<lt>mudler@sabayon.orgE<gt>
 
 =cut
-

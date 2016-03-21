@@ -59,6 +59,7 @@ sub execute {
     open my $EREPO, ">" . App::enman::ETPREPO_DIR() . $repo_name
         or die(
         __x( "cannot write the repository file: {error}", error => $! ) );
+    binmode $EREPO, ":utf8";
     print $EREPO $repo;
     close($EREPO);
     info( __("Now you are ready to go do an 'equo up' to sync the repository")
