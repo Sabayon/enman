@@ -31,7 +31,7 @@ It removes the repository from your machine
 It search and list the repository that matches your query
 
 # FOR REPOSITORY MANTAINERS
-If you want your repository available thru enman, send a PR on the [Enman-db GitHub repository](https://github.com/Spike-Pentesting/enman-db)
+If you want your repository available thru enman, send a PR on the [Enman-db GitHub repository](https://github.com/Sabayon/enman-db)
 
 # COPYRIGHT AND LICENSE
 
