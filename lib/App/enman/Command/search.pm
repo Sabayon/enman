@@ -1,7 +1,7 @@
 # ABSTRACT: search repositories into the enman db
 package App::enman::Command::search;
 use App::enman -command;
-use App::enman::Utils;
+use App::enman;
 use LWP::Simple;
 use Locale::TextDomain 'App-enman';
 use JSON;
@@ -18,6 +18,7 @@ sub opt_spec {
             "package|P",
 "search among available packages in the Sabayon Community Repositories infrastructure"
         ],
+        [ "quiet|q", "Quiet output" ],
     );
 }
 
@@ -30,32 +31,38 @@ sub validate_args {
 }
 
 sub execute {
-    my ( $self, $opts, $args ) = @_;
+    my ( $self, $opt, $args ) = @_;
+    App::enman->instance->loglevel("quiet") if $opt->{quiet};
     my $query = join( "", @{$args} );
-    $opts->{package} ? package_search($query) : repository_search($query);
+    $self->usage_error("print help")
+      if ( $query eq "--help" or $query eq "-h" );
+    $opt->{package} ? package_search($query) : repository_search($query);
 
 }
 
 sub package_search() {
     my $query = join( "", @_ );
-    info(
+    App::enman->instance->info(
         __x(
             "Searching '{query}' package on the Enman db...", query => $query
         )
-    );
+    ) if App::enman->instance->loglevel ne "quiet";
     my @matches = &pkg_search($query);
-    notice( __x( "No matches for '{query}'", query => $query ) ) and return 1
+    App::enman->instance->notice(
+        __x( "No matches for '{query}'", query => $query ) )
+      and return 1
       if @matches == 0;
-    notice(
+    App::enman->instance->notice(
         __x(
             "{matches} results for {query}",
             matches => scalar(@matches),
             query   => $query
         )
-    );
-    info "=" x 6;
+    ) if App::enman->instance->loglevel ne "quiet";
+    App::enman->instance->info( "=" x 6 )
+      if App::enman->instance->loglevel ne "quiet";
     foreach my $match (@matches) {
-        info(
+        App::enman->instance->info(
             __x(
                 "{package} - repository: {repository} ({arch})",
                 repository => $match->[0],
@@ -69,28 +76,32 @@ sub package_search() {
 sub repository_search() {
     my $query = join( "", @_ );
     if ( $query ne "" ) {
-        info(
+        App::enman->instance->info(
             __x( "Searching '{query}' on the Enman Database", query => $query )
-        );
+        ) if App::enman->instance->loglevel ne "quiet";
     }
     else {
-        info( __x("Listing all repositories available remotely") );
+        App::enman->instance->info(
+            __x("Listing all repositories available remotely") )
+          if App::enman->instance->loglevel ne "quiet";
     }
 
     my @matches = &db_search($query);
-    notice( __x( "No matches for '{query}'", query => $query ) )
+    App::enman->instance->notice(
+        __x( "No matches for '{query}'", query => $query ) )
       and return 1
       if @matches == 0;
-    notice(
+    App::enman->instance->notice(
         __x(
             "{matches} results for {query}",
             matches => scalar(@matches),
             query   => $query
         )
     ) if ( $query ne "" );
-    info "=" x 6;
+    App::enman->instance->info( "=" x 6 )
+      if App::enman->instance->loglevel ne "quiet";
     foreach my $match (@matches) {
-        info(
+        App::enman->instance->info(
             __x(
                 "Repository: {repository} - \"{description}\"",
                 repository  => $match->[0],
@@ -103,7 +114,8 @@ sub repository_search() {
 sub pkg_search() {
     my $query = join( "", @_ );
     if ( !head( App::enman::METADATA_DB() ) ) {
-        info( __x("Metadata not available online. Please try later") );
+        App::enman->instance->info(
+            __x("Metadata not available online. Please try later") );
         return [];
     }
     my @matches;
@@ -148,6 +160,27 @@ sub db_search {
         #enabling regex search, not quoted
         elsif ( $repo =~ /$string/i ) {
             push( @matches, [ $repo_name, $description ] );
+        }
+    }
+    return @matches;
+}
+
+sub db_search_config {
+    my ($string) = shift;
+    my $enman = get( App::enman::ENMAN_DB() );
+    my @enman_db = split( /\n/, $enman );
+    my @matches;
+    foreach my $repo (@enman_db) {
+        my ( $repo_name, $repo_url ) = split( ':', $repo, 2 );
+
+        #if exact match return only the unique(should be) result
+        if ( $repo_name eq $string ) {
+            return ( [ $repo_name, $repo_url ] );
+        }
+
+        #enabling regex search, not quoted
+        elsif ( $repo =~ /$string/i ) {
+            push( @matches, [ $repo_name, $repo_url ] );
         }
     }
     return @matches;

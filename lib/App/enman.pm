@@ -9,7 +9,72 @@ use constant ENMAN_DB => $ENV{ENMAN_DB}
 use constant METADATA_DB => $ENV{METADATA_DB}
   || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "0.9";
+our $VERSION = "1.0";
+my $singleton;
+use Term::ANSIColor;
+use utf8;
+use Encode;
+
+sub new {
+    $singleton ||= shift->SUPER::new(@_);
+    $singleton->{LOG_LEVEL} = "info" if !$singleton->{LOG_LEVEL};
+    $singleton;
+}
+
+sub error {
+    my $self = shift;
+    my @msg  = @_;
+    if ( $self->{LOG_LEVEL} eq "info" ) {
+        print STDERR color 'bold red';
+        print STDERR encode_utf8('☢☢☢ ☛  ');
+        print STDERR color 'bold white';
+        print STDERR join( "\n", @msg ), "\n";
+        print STDERR color 'reset';
+    }
+    elsif ( $self->{LOG_LEVEL} eq "quiet" ) {
+        print join( "\n", @msg ), "\n";
+    }
+}
+
+sub info {
+    my $self = shift;
+
+    my @msg = @_;
+    if ( $self->{LOG_LEVEL} eq "info" ) {
+        print color 'bold green';
+        print encode_utf8('╠ ');
+        print color 'bold white';
+        print join( "\n", @msg ), "\n";
+        print color 'reset';
+    }
+    elsif ( $self->{LOG_LEVEL} eq "quiet" ) {
+        print join( "\n", @msg ), "\n";
+    }
+}
+
+sub notice {
+    my $self = shift;
+    my @msg  = @_;
+    if ( $self->{LOG_LEVEL} eq "info" ) {
+        print STDERR color 'bold yellow';
+        print STDERR encode_utf8('☛ ');
+        print STDERR color 'bold white';
+        print STDERR join( "\n", @msg ), "\n";
+        print STDERR color 'reset';
+    }
+    elsif ( $self->{LOG_LEVEL} eq "quiet" ) {
+        print STDERR join( "\n", @msg ), "\n";
+    }
+}
+
+sub loglevel {
+    my $self = shift;
+
+    $self->{LOG_LEVEL} = $_[0] if $_[0];
+
+    return $self->{LOG_LEVEL};
+}
+*instance = \&new;
 
 1;
 __END__
