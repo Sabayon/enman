@@ -25,12 +25,9 @@ enman - a layman equivalent for entropy repositories
     $ enman add "somerepo"
     $ enman remove "somerepo"
     $ enman search "something"
-    $ enman search --package "app-foo/foobar"
-    $ enman search -P "app-foo/foobar"
+    $ enman search -P|--package "app-foo/foobar" # shows packages in the SCR repositories
     $ enman list
-    $ enman list -A
-    $ enman list --availables
-
+    $ enman list -A|--availables # lists available remote repositories in SCR
 
 
     # get help:
@@ -51,7 +48,12 @@ It search and add the repository to your machine
 It removes the repository from your machine
 
 =head2 search
-It search and list the repository that matches your query
+It search and list the repository that matches your query, if C<--package> or C<-P> is supplied as option, it searchs among the SCR remote database
+
+Searchs
+
+=head2 list
+It prints the repositories installed in the system, if C<--availables> or C<-A> is supplied as option, it lists the available SCR repositories.
 
 =head1 FOR REPOSITORY MANTAINERS
 If you want your repository available thru enman, send a PR on the L<Enman-db GitHub repository|https://github.com/Sabayon/enman-db>

@@ -68,9 +68,18 @@ sub package_search() {
 
 sub repository_search() {
     my $query = join( "", @_ );
-    info( __x( "Searching '{query}' on the Enman db...", query => $query ) );
+    if ( $query ne "" ) {
+        info(
+            __x( "Searching '{query}' on the Enman Database", query => $query )
+        );
+    }
+    else {
+        info( __x("Listing all packages available remotely") );
+    }
+
     my @matches = &db_search($query);
-    notice( __x( "No matches for '{query}'", query => $query ) ) and return 1
+    notice( __x( "No matches for '{query}'", query => $query ) )
+      and return 1
       if @matches == 0;
     notice(
         __x(
