@@ -3,8 +3,9 @@ use base 'Exporter';
 use Term::ANSIColor;
 use utf8;
 use Encode;
-@EXPORT = qw(info error notice);
+@EXPORT    = qw(info error notice);
 @EXPORT_OK = qw();
+
 sub error {
     my @msg = @_;
     print STDERR color 'bold red';

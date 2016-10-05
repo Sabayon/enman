@@ -5,6 +5,12 @@ use LWP::Simple;
 use App::enman::Utils;
 use Locale::TextDomain 'App-enman';
 
+sub abstract { "Add repositories in the system" }
+
+sub description {
+    "Fetches and install remote repositories definitions";
+}
+
 sub execute {
     my ( $self, $opts, $args ) = @_;
     error( __("You must run enman with root permissions") ) and return 1

@@ -3,11 +3,13 @@ use strict;
 use warnings;
 use App::Cmd::Setup -app;
 use constant ETPREPO_DIR => $ENV{ETPREPO_DIR}
-    || "/etc/entropy/repositories.conf.d/";
+  || "/etc/entropy/repositories.conf.d/";
 use constant ENMAN_DB => $ENV{ENMAN_DB}
-    || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
+  || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
+use constant METADATA_DB => $ENV{METADATA_DB}
+  || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "0.7";
+our $VERSION = "0.8";
 
 1;
 __END__
@@ -23,6 +25,13 @@ enman - a layman equivalent for entropy repositories
     $ enman add "somerepo"
     $ enman remove "somerepo"
     $ enman search "something"
+    $ enman search --package "app-foo/foobar"
+    $ enman search -P "app-foo/foobar"
+    $ enman list
+    $ enman list -A
+    $ enman list --availables
+
+
 
     # get help:
 
