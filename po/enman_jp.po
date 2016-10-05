@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enman\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-05 17:34+0200\n"
+"POT-Creation-Date: 2016-10-06 00:23+0200\n"
 "PO-Revision-Date: 2015-04-06 17:54+0000\n"
 "Last-Translator: necrose99 <mike@michaellawrenceit.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/enman/language/"
@@ -19,118 +19,119 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: lib/App/enman/Command/add.pm:16 lib/App/enman/Command/list.pm:38
-#: lib/App/enman/Command/remove.pm:9
+#: lib/App/enman/Command/add.pm:23 lib/App/enman/Command/list.pm:40
+#: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr "Root 権限で enman を実行する必要があります。"
 
-#: lib/App/enman/Command/add.pm:19
+#: lib/App/enman/Command/add.pm:27
 #, fuzzy, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
 msgstr ""
 "リポジトリ '{repository}' お使いのシステムにインストールされているはありませ"
 "ん。"
 
-#: lib/App/enman/Command/add.pm:27
+#: lib/App/enman/Command/add.pm:33
 msgid "You must supply the repository name"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:33
+#: lib/App/enman/Command/add.pm:40
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
 msgstr "'{repository}' 1以上のリポジトリマッチ："
 
-#: lib/App/enman/Command/add.pm:39
+#: lib/App/enman/Command/add.pm:46
 #, perl-brace-format
 msgid "Repository: {repository}"
 msgstr "リポジトリ: {repository}"
 
-#: lib/App/enman/Command/add.pm:45
+#: lib/App/enman/Command/add.pm:51
 #, perl-brace-format
 msgid "Configuration file: {config}"
 msgstr "構成ファイル: {config}"
 
-#: lib/App/enman/Command/add.pm:54
+#: lib/App/enman/Command/add.pm:59
 #, perl-brace-format
 msgid "No matches for '{repository}'"
 msgstr "'{repository}' に対して一致なし"
 
-#: lib/App/enman/Command/add.pm:59
+#: lib/App/enman/Command/add.pm:64
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
 msgstr "'{repository}' お使いのシステムにインストールします。"
 
-#: lib/App/enman/Command/add.pm:67
+#: lib/App/enman/Command/add.pm:71
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
 msgstr "リポジトリファイルを書き込むことができません。: {error}"
 
-#: lib/App/enman/Command/add.pm:71
-msgid "Now you are ready to go do an 'equo up' to sync the repository"
-msgstr ""
-
-#: lib/App/enman/Command/list.pm:42
-msgid "Repositories available in your system: "
+#: lib/App/enman/Command/add.pm:76
+#, fuzzy, perl-brace-format
+msgid "{repo} installed in your system"
 msgstr "お使いのシステムで使用可能なリポジトリ："
 
-#: lib/App/enman/Command/list.pm:49
+#: lib/App/enman/Command/list.pm:51
 msgid "No repositories were installed with enman"
 msgstr "Enman とリポジトリがインストールされていません。"
 
-#: lib/App/enman/Command/list.pm:54
-msgid ""
-"Repositories enabled with enman: (so you can remove it with enman <name>)"
-msgstr ""
-"Enman で有効になっているリポジトリ: (ので enman <name>を削除することができま"
-"す)"
+#: lib/App/enman/Command/list.pm:55
+#, fuzzy
+msgid "Repositories enabled with enman:"
+msgstr "Enman とリポジトリがインストールされていません。"
 
-#: lib/App/enman/Command/remove.pm:16
+#: lib/App/enman/Command/remove.pm:29
 #, perl-brace-format
 msgid "removing '{repo_name}' - '{repository}'"
 msgstr "取り外し '{repo_name}' - '{repository}'"
 
-#: lib/App/enman/Command/remove.pm:25
+#: lib/App/enman/Command/remove.pm:39
 #, perl-brace-format
 msgid "There is no repository '{repository}' installed in your system"
 msgstr ""
 "リポジトリ '{repository}' お使いのシステムにインストールされているはありませ"
 "ん。"
 
-#: lib/App/enman/Command/search.pm:43
+#: lib/App/enman/Command/search.pm:47
 #, fuzzy, perl-brace-format
 msgid "Searching '{query}' package on the Enman db..."
 msgstr "Enman db '{query}' を検索中."
 
-#: lib/App/enman/Command/search.pm:47 lib/App/enman/Command/search.pm:81
+#: lib/App/enman/Command/search.pm:52 lib/App/enman/Command/search.pm:91
 #, perl-brace-format
 msgid "No matches for '{query}'"
 msgstr "'{query}' に対して一致なし"
 
-#: lib/App/enman/Command/search.pm:51 lib/App/enman/Command/search.pm:86
+#: lib/App/enman/Command/search.pm:57 lib/App/enman/Command/search.pm:96
 #, perl-brace-format
 msgid "{matches} results for {query}"
 msgstr "{matches} {query}の結果"
 
-#: lib/App/enman/Command/search.pm:60
+#: lib/App/enman/Command/search.pm:67
 #, fuzzy, perl-brace-format
 msgid "{package} - repository: {repository} ({arch})"
 msgstr "リポジトリ: {repository}"
 
-#: lib/App/enman/Command/search.pm:73
+#: lib/App/enman/Command/search.pm:80
 #, fuzzy, perl-brace-format
 msgid "Searching '{query}' on the Enman Database"
 msgstr "Enman db '{query}' を検索中."
 
-#: lib/App/enman/Command/search.pm:77
+#: lib/App/enman/Command/search.pm:85
 #, fuzzy
 msgid "Listing all repositories available remotely"
 msgstr "お使いのシステムで使用可能なリポジトリ："
 
-#: lib/App/enman/Command/search.pm:95
+#: lib/App/enman/Command/search.pm:106
 #, fuzzy, perl-brace-format
 msgid "Repository: {repository} - \"{description}\""
 msgstr "リポジトリ: {repository}"
 
-#: lib/App/enman/Command/search.pm:106
+#: lib/App/enman/Command/search.pm:118
 msgid "Metadata not available online. Please try later"
 msgstr ""
+
+#~ msgid ""
+#~ "Repositories enabled with enman: (so you can remove it with enman <name>)"
+#~ msgstr ""
+#~ "Enman で有効になっているリポジトリ: (ので enman <name>を削除することができ"
+#~ "ます)"
