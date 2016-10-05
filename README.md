@@ -1,6 +1,10 @@
 # NAME
 
-enman - a layman equivalent for entropy repositories
+App::enman
+
+# VERSION
+
+version 0.8
 
 # SYNOPSIS
 
@@ -32,21 +36,21 @@ It removes the repository from your machine
 ## search
 It search and list the repository that matches your query, if `--package` or `-P` is supplied as option, it searchs among the SCR remote database
 
-Searchs
-
 ## list
 It prints the repositories installed in the system, if `--availables` or `-A` is supplied as option, it lists the available SCR repositories.
 
 # FOR REPOSITORY MANTAINERS
 If you want your repository available thru enman, send a PR on the [Enman-db GitHub repository](https://github.com/Sabayon/enman-db)
 
-# LICENSE
-
-Copyright (C) mudler.
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
 
 # AUTHOR
 
 mudler <mudler@sabayon.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2016 by Ettore Di Giacinto.
+
+This is free software, licensed under:
+
+    The GNU General Public License, Version 3, June 2007

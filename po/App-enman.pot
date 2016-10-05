@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR mudler
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Ettore Di Giacinto
+# This file is distributed under the same license as the App-enman package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: App-enman 0.4\n"
+"Project-Id-Version: App-enman 0.8\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2015-04-09 12:29+0200\n"
+"POT-Creation-Date: 2016-10-05 17:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,63 +17,63 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/App/enman/Command/add.pm:10 lib/App/enman/Command/list.pm:9
+#: lib/App/enman/Command/add.pm:16 lib/App/enman/Command/list.pm:38
 #: lib/App/enman/Command/remove.pm:9
 msgid "You must run enman with root permissions"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:13
+#: lib/App/enman/Command/add.pm:19
 #, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:21
+#: lib/App/enman/Command/add.pm:27
 msgid "You must supply the repository name"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:27
+#: lib/App/enman/Command/add.pm:33
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:33 lib/App/enman/Command/search.pm:26
+#: lib/App/enman/Command/add.pm:39
 #, perl-brace-format
 msgid "Repository: {repository}"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:39 lib/App/enman/Command/search.pm:29
+#: lib/App/enman/Command/add.pm:45
 #, perl-brace-format
 msgid "Configuration file: {config}"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:48
+#: lib/App/enman/Command/add.pm:54
 #, perl-brace-format
 msgid "No matches for '{repository}'"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:53
+#: lib/App/enman/Command/add.pm:59
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:61
+#: lib/App/enman/Command/add.pm:67
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:64
+#: lib/App/enman/Command/add.pm:71
 msgid "Now you are ready to go do an 'equo up' to sync the repository"
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:13
+#: lib/App/enman/Command/list.pm:42
 msgid "Repositories available in your system: "
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:20
+#: lib/App/enman/Command/list.pm:49
 msgid "No repositories were installed with enman"
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:24
+#: lib/App/enman/Command/list.pm:54
 msgid ""
 "Repositories enabled with enman: (so you can remove it with enman <name>)"
 msgstr ""
@@ -88,17 +88,40 @@ msgstr ""
 msgid "There is no repository '{repository}' installed in your system"
 msgstr ""
 
-#: lib/App/enman/Command/search.pm:12
+#: lib/App/enman/Command/search.pm:43
 #, perl-brace-format
-msgid "Searching '{query}' on the enman db..."
+msgid "Searching '{query}' package on the Enman db..."
 msgstr ""
 
-#: lib/App/enman/Command/search.pm:15
+#: lib/App/enman/Command/search.pm:47 lib/App/enman/Command/search.pm:81
 #, perl-brace-format
 msgid "No matches for '{query}'"
 msgstr ""
 
-#: lib/App/enman/Command/search.pm:18
+#: lib/App/enman/Command/search.pm:51 lib/App/enman/Command/search.pm:86
 #, perl-brace-format
 msgid "{matches} results for {query}"
+msgstr ""
+
+#: lib/App/enman/Command/search.pm:60
+#, perl-brace-format
+msgid "{package} - repository: {repository} ({arch})"
+msgstr ""
+
+#: lib/App/enman/Command/search.pm:73
+#, perl-brace-format
+msgid "Searching '{query}' on the Enman Database"
+msgstr ""
+
+#: lib/App/enman/Command/search.pm:77
+msgid "Listing all packages available remotely"
+msgstr ""
+
+#: lib/App/enman/Command/search.pm:95
+#, perl-brace-format
+msgid "Repository: {repository} - \"{description}\""
+msgstr ""
+
+#: lib/App/enman/Command/search.pm:106
+msgid "Metadata not available online. Please try later"
 msgstr ""
