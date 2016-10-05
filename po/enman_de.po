@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enman\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-05 17:11+0200\n"
+"POT-Creation-Date: 2016-10-05 17:34+0200\n"
 "PO-Revision-Date: 2015-04-06 17:51+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/enman/language/"
@@ -117,8 +117,9 @@ msgid "Searching '{query}' on the Enman Database"
 msgstr "'{query}' wird in der enman-Datenbank gesucht..."
 
 #: lib/App/enman/Command/search.pm:77
-msgid "Listing all packages available remotely"
-msgstr ""
+#, fuzzy
+msgid "Listing all repositories available remotely"
+msgstr "Auf Ihrem System verfügbare Repositorien: "
 
 #: lib/App/enman/Command/search.pm:95
 #, fuzzy, perl-brace-format
