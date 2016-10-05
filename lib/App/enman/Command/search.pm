@@ -74,7 +74,7 @@ sub repository_search() {
         );
     }
     else {
-        info( __x("Listing all packages available remotely") );
+        info( __x("Listing all repositories available remotely") );
     }
 
     my @matches = &db_search($query);
@@ -87,7 +87,7 @@ sub repository_search() {
             matches => scalar(@matches),
             query   => $query
         )
-    );
+    ) if ( $query ne "" );
     info "=" x 6;
     foreach my $match (@matches) {
         info(

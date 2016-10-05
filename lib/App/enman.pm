@@ -9,7 +9,7 @@ use constant ENMAN_DB => $ENV{ENMAN_DB}
 use constant METADATA_DB => $ENV{METADATA_DB}
   || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "0.8";
+our $VERSION = "0.9";
 
 1;
 __END__
