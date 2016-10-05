@@ -13,7 +13,7 @@ sub description {
 sub opt_spec {
     return (
         [
-            "availables|A",
+            "available|A",
             "Shows the list of the available remote repositories"
         ],
         [ "installed|I", "Shows the list of the installed repositories" ],
@@ -31,7 +31,7 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $args ) = @_;
     App::enman->instance->loglevel("quiet")             if $opt->{quiet};
-    &App::enman::Command::search::repository_search("") if $opt->{availables};
+    &App::enman::Command::search::repository_search("") if $opt->{available};
     local_repositories()                                if $opt->{installed};
 }
 
