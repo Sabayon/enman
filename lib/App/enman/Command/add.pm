@@ -2,7 +2,6 @@
 package App::enman::Command::add;
 use App::enman -command;
 use LWP::Simple;
-use App::enman::Utils;
 use Locale::TextDomain 'App-enman';
 use App::enman;
 
