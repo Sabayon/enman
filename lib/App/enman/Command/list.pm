@@ -57,7 +57,8 @@ sub local_repositories {
     my $etpsuffix = App::enman::ETPSUFFIX;    #faster since gets compiled
     foreach my $repo (@enman_repos) {
         $repo =~ s/${etpsuffix}//g;
-        App::enman->instance->notice("\t$repo");
+        $indent = (App::enman->instance->loglevel eq "quiet") ? "" : "\t";
+        App::enman->instance->notice($indent . $repo);
     }
 
     closedir($dir);
