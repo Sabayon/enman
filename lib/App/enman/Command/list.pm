@@ -31,8 +31,9 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $args ) = @_;
     App::enman->instance->loglevel("quiet")             if $opt->{quiet};
-    &App::enman::Command::search::repository_search("") if $opt->{availables};
-    local_repositories()                                if $opt->{installed};
+    &App::enman::Command::search::repository_search("") and exit 0 if $opt->{availables};
+    local_repositories() and exit 0                                if $opt->{installed};
+    $self->usage_error(__("You should at least supply --installed or --availables"));
 }
 
 sub local_repositories {

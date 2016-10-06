@@ -2,7 +2,6 @@
 package App::enman::Command::add;
 use App::enman -command;
 use LWP::Simple;
-use App::enman::Utils;
 use Locale::TextDomain 'App-enman';
 use App::enman;
 
@@ -20,7 +19,7 @@ sub execute {
     my ( $self, $opts, $args ) = @_;
     App::enman->instance->loglevel("quiet") if $opt->{quiet};
 
-    error( __("You must run enman with root permissions") ) and return 1
+    App::enman->instance->error( __("You must run enman with root permissions") ) and return 1
       if $> != 0;
     App::enman->instance->info(
         __x(
@@ -30,7 +29,7 @@ sub execute {
       )
       and return 1
       if -e App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
-    error( __("You must supply the repository name") ) and return 1
+    App::enman->instance->error( __("You must supply the repository name") ) and return 1
       if @{$args} == 0;
 
     my @results = &App::enman::Command::search::db_search_config( @{$args} );
