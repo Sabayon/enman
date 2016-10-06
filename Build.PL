@@ -11,6 +11,7 @@ my %module_build_args = (
     "Module::Build" => "0.28"
   },
   "configure_requires" => {
+    "ExtUtils::MakeMaker" => 0,
     "Module::Build" => "0.28"
   },
   "dist_abstract" => "a layman equivalent for entropy repositories",
@@ -18,7 +19,7 @@ my %module_build_args = (
     "mudler <mudler\@sabayon.org>"
   ],
   "dist_name" => "App-enman",
-  "dist_version" => "1.2",
+  "dist_version" => "1.3",
   "license" => "gpl",
   "module_name" => "App::enman",
   "recursive_test_files" => 1,

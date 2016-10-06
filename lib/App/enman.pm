@@ -9,7 +9,7 @@ use constant ENMAN_DB => $ENV{ENMAN_DB}
 use constant METADATA_DB => $ENV{METADATA_DB}
   || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "1.2";
+our $VERSION = "1.3";
 my $singleton;
 use Term::ANSIColor;
 use utf8;
@@ -115,23 +115,8 @@ It removes the repository from your machine
 =head2 search
 It search and list the repository that matches your query, if C<--package> or C<-P> is supplied as option, it searchs among the SCR remote database
 
-Searchs
-
 =head2 list
 It prints the repositories installed in the system, if C<--available> or C<-A> is supplied as option, it lists the available SCR repositories.
 
 =head1 FOR REPOSITORY MANTAINERS
 If you want your repository available thru enman, send a PR on the L<Enman-db GitHub repository|https://github.com/Sabayon/enman-db>
-
-=head1 LICENSE
-
-Copyright (C) mudler.
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
-=head1 AUTHOR
-
-mudler E<lt>mudler@sabayon.orgE<gt>
-
-=cut
