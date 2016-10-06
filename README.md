@@ -4,7 +4,7 @@ App::enman
 
 # VERSION
 
-version 1.0
+version 1.1
 
 # SYNOPSIS
 
@@ -14,7 +14,6 @@ version 1.0
     $ enman search -P|--package "app-foo/foobar" # shows packages in the SCR repositories
     $ enman list
     $ enman list -A|--availables # lists available remote repositories in SCR
-    $ enman list -Aq # -q quiets the output
 
 
     # get help:
@@ -25,10 +24,6 @@ version 1.0
 # DESCRIPTION
 
 enman is the equivalent of layman for Sabayon, it allows you to easily add/remove/search repositories into your sabayon machine.
-
-# NAME
-
-enman - a layman equivalent for entropy repositories
 
 # COMMANDS
 
