@@ -1,0 +1,6 @@
+name = "App-enman"
+# badges = ["travis"]
+authority="cpan:MUDLER"
+
+module_maker="ModuleBuildTiny"
+
