@@ -13,7 +13,7 @@ sub description {
 sub opt_spec {
     return (
         [
-            "availables|A",
+            "available|A",
             "Shows the list of the available remote repositories"
         ],
         [ "installed|I", "Shows the list of the installed repositories" ],
@@ -31,9 +31,13 @@ sub validate_args {
 sub execute {
     my ( $self, $opt, $args ) = @_;
     App::enman->instance->loglevel("quiet")             if $opt->{quiet};
-    &App::enman::Command::search::repository_search("") and exit 0 if $opt->{availables};
-    local_repositories() and exit 0                                if $opt->{installed};
-    $self->usage_error(__("You should at least supply --installed or --availables"));
+    if ($opt->{available}) {
+      &App::enman::Command::search::repository_search("")
+    } elsif($opt->{installed}) {
+      local_repositories()
+    } else {
+      $self->usage_error(__("You should at least supply --installed or --available"))
+    }
 }
 
 sub local_repositories {
@@ -58,8 +62,7 @@ sub local_repositories {
     my $etpsuffix = App::enman::ETPSUFFIX;    #faster since gets compiled
     foreach my $repo (@enman_repos) {
         $repo =~ s/${etpsuffix}//g;
-        $indent = (App::enman->instance->loglevel eq "quiet") ? "" : "\t";
-        App::enman->instance->notice($indent . $repo);
+        App::enman->instance->notice(((App::enman->instance->loglevel eq "quiet") ? "" : "\t"). $repo);
     }
 
     closedir($dir);

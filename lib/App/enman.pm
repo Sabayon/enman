@@ -9,7 +9,7 @@ use constant ENMAN_DB => $ENV{ENMAN_DB}
 use constant METADATA_DB => $ENV{METADATA_DB}
   || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "1.1";
+our $VERSION = "1.2";
 my $singleton;
 use Term::ANSIColor;
 use utf8;
@@ -92,7 +92,7 @@ enman - a layman equivalent for entropy repositories
     $ enman search "something"
     $ enman search -P|--package "app-foo/foobar" # shows packages in the SCR repositories
     $ enman list
-    $ enman list -A|--availables # lists available remote repositories in SCR
+    $ enman list -A|--available # lists available remote repositories in SCR
 
 
     # get help:
@@ -118,7 +118,7 @@ It search and list the repository that matches your query, if C<--package> or C<
 Searchs
 
 =head2 list
-It prints the repositories installed in the system, if C<--availables> or C<-A> is supplied as option, it lists the available SCR repositories.
+It prints the repositories installed in the system, if C<--available> or C<-A> is supplied as option, it lists the available SCR repositories.
 
 =head1 FOR REPOSITORY MANTAINERS
 If you want your repository available thru enman, send a PR on the L<Enman-db GitHub repository|https://github.com/Sabayon/enman-db>
