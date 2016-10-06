@@ -30,13 +30,16 @@ sub validate_args {
 
 sub execute {
     my ( $self, $opt, $args ) = @_;
-    App::enman->instance->loglevel("quiet")             if $opt->{quiet};
-    if ($opt->{available}) {
-      &App::enman::Command::search::repository_search("")
-    } elsif($opt->{installed}) {
-      local_repositories()
-    } else {
-      $self->usage_error(__("You should at least supply --installed or --available"))
+    App::enman->instance->loglevel("quiet") if $opt->{quiet};
+    if ( $opt->{available} ) {
+        &App::enman::Command::search::repository_search("");
+    }
+    elsif ( $opt->{installed} ) {
+        local_repositories();
+    }
+    else {
+        $self->usage_error(
+            __("You should at least supply --installed or --available") );
     }
 }
 
@@ -57,12 +60,14 @@ sub local_repositories {
       and return 1
       if ( @enman_repos == 0 );
 
-    App::enman->instance->info( __( "Repositories enabled with enman:" ) )
+    App::enman->instance->info( __("Repositories enabled with enman:") )
       if App::enman->instance->loglevel ne "quiet";
     my $etpsuffix = App::enman::ETPSUFFIX;    #faster since gets compiled
     foreach my $repo (@enman_repos) {
         $repo =~ s/${etpsuffix}//g;
-        App::enman->instance->notice(((App::enman->instance->loglevel eq "quiet") ? "" : "\t"). $repo);
+        App::enman->instance->notice(
+            ( ( App::enman->instance->loglevel eq "quiet" ) ? "" : "\t" )
+            . $repo );
     }
 
     closedir($dir);
