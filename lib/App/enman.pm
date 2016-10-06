@@ -9,11 +9,21 @@ use constant ENMAN_DB => $ENV{ENMAN_DB}
 use constant METADATA_DB => $ENV{METADATA_DB}
   || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "1.3.1";
+our $VERSION = "1.3.2";
 my $singleton;
 use Term::ANSIColor;
 use utf8;
 use Encode;
+use Locale::TextDomain 'App-enman';
+use Locale::Messages qw(bind_textdomain_filter);
+
+BEGIN {
+    # Borrowed from Sqitch :)
+    # Force Locale::TextDomain to encode in UTF-8 and to decode all messages.
+    $ENV{OUTPUT_CHARSET} = 'UTF-8';
+    bind_textdomain_filter 'App-enman' => \&Encode::decode_utf8;
+
+}
 
 sub new {
     $singleton ||= shift->SUPER::new(@_);
