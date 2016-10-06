@@ -3,34 +3,38 @@
 use strict;
 use warnings;
 
-use Module::Build 0.28;
+use Module::Build 0.3601;
 use lib qw{inc}; use Module::Build::enman;
 
 my %module_build_args = (
   "build_requires" => {
-    "Module::Build" => "0.28"
+    "Module::Build" => "0.3601"
   },
   "configure_requires" => {
     "ExtUtils::MakeMaker" => 0,
-    "Module::Build" => "0.28"
+    "File::ShareDir::Install" => "0.06",
+    "Module::Build" => "0.3601"
   },
   "dist_abstract" => "a layman equivalent for entropy repositories",
   "dist_author" => [
     "mudler <mudler\@sabayon.org>"
   ],
   "dist_name" => "App-enman",
-  "dist_version" => "1.3",
+  "dist_version" => "1.3.1",
   "license" => "gpl",
   "module_name" => "App::enman",
   "recursive_test_files" => 1,
   "script_files" => [
     "bin/enman"
-  ]
+  ],
+  "share_dir" => {
+    "dist" => "share"
+  }
 );
 
 
 my %fallback_build_requires = (
-  "Module::Build" => "0.28"
+  "Module::Build" => "0.3601"
 );
 
 

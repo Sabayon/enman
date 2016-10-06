@@ -2,3 +2,44 @@
 # PODNAME: enman
 use App::enman;
 App::enman->run;
+1;
+__END__
+
+=encoding utf-8
+
+=head1 NAME
+
+enman - a layman equivalent for entropy repositories
+
+=head1 SYNOPSIS
+
+    $ enman add "somerepo"
+    $ enman remove "somerepo"
+    $ enman search "something"
+    $ enman search -P|--package "app-foo/foobar" # shows packages in the SCR repositories
+    $ enman list
+    $ enman list -A|--available # lists available remote repositories in SCR
+
+
+    # get help:
+
+    $ enman help
+    $ enman commands
+
+=head1 DESCRIPTION
+
+enman is the equivalent of layman for Sabayon, it allows you to easily add/remove/search repositories into your sabayon machine.
+
+=head1 COMMANDS
+
+=head2 add "community"
+Adds the "community" repository in your machine
+
+=head2 remove "foobar"
+It removes the foobar repository from your machine
+
+=head2 search "query"
+It search and list the repository that matches your query, if C<--package> or C<-P> is supplied as option, it searchs among the SCR remote database
+
+=head2 list
+It prints the repositories installed in the system, if C<--available> or C<-A> is supplied as option, it lists the available SCR repositories.

@@ -4,7 +4,7 @@ App::enman
 
 # VERSION
 
-version 1.3
+version 1.3.1
 
 # SYNOPSIS
 
