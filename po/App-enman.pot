@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: App-enman 1.0\n"
+"Project-Id-Version: App-enman 1.2\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-06 11:52+0200\n"
+"POT-Creation-Date: 2016-10-06 12:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:41
+#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:45
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr ""
@@ -66,15 +66,15 @@ msgstr ""
 msgid "{repo} installed in your system"
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:36
-msgid "You should at least supply --installed or --availables"
-msgstr ""
-
-#: lib/App/enman/Command/list.pm:52
-msgid "No repositories were installed with enman"
+#: lib/App/enman/Command/list.pm:39
+msgid "You should at least supply --installed or --available"
 msgstr ""
 
 #: lib/App/enman/Command/list.pm:56
+msgid "No repositories were installed with enman"
+msgstr ""
+
+#: lib/App/enman/Command/list.pm:60
 msgid "Repositories enabled with enman:"
 msgstr ""
 
@@ -117,11 +117,11 @@ msgstr ""
 msgid "Listing all repositories available remotely"
 msgstr ""
 
-#: lib/App/enman/Command/search.pm:106
+#: lib/App/enman/Command/search.pm:109
 #, perl-brace-format
 msgid "Repository: {repository} - \"{description}\""
 msgstr ""
 
-#: lib/App/enman/Command/search.pm:118
+#: lib/App/enman/Command/search.pm:122
 msgid "Metadata not available online. Please try later"
 msgstr ""

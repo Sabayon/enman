@@ -4,7 +4,7 @@ App::enman
 
 # VERSION
 
-version 1.1
+version 1.2
 
 # SYNOPSIS
 
@@ -13,7 +13,7 @@ version 1.1
     $ enman search "something"
     $ enman search -P|--package "app-foo/foobar" # shows packages in the SCR repositories
     $ enman list
-    $ enman list -A|--availables # lists available remote repositories in SCR
+    $ enman list -A|--available # lists available remote repositories in SCR
 
 
     # get help:
@@ -39,7 +39,7 @@ It search and list the repository that matches your query, if `--package` or `-P
 Searchs
 
 ## list
-It prints the repositories installed in the system, if `--availables` or `-A` is supplied as option, it lists the available SCR repositories.
+It prints the repositories installed in the system, if `--available` or `-A` is supplied as option, it lists the available SCR repositories.
 
 # FOR REPOSITORY MANTAINERS
 If you want your repository available thru enman, send a PR on the [Enman-db GitHub repository](https://github.com/Sabayon/enman-db)

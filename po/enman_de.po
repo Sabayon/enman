@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enman\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-06 11:52+0200\n"
+"POT-Creation-Date: 2016-10-06 12:35+0200\n"
 "PO-Revision-Date: 2015-04-06 17:51+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/enman/language/"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:41
+#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:45
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr "Sie müssen enman mit root-Rechten ausführen"
@@ -68,15 +68,15 @@ msgstr "Kann Repositoriumsdatei nicht schreiben: {error}"
 msgid "{repo} installed in your system"
 msgstr "Auf Ihrem System verfügbare Repositorien: "
 
-#: lib/App/enman/Command/list.pm:36
-msgid "You should at least supply --installed or --availables"
+#: lib/App/enman/Command/list.pm:39
+msgid "You should at least supply --installed or --available"
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:52
+#: lib/App/enman/Command/list.pm:56
 msgid "No repositories were installed with enman"
 msgstr "Mit enman wurden keine Repositorien installiert"
 
-#: lib/App/enman/Command/list.pm:56
+#: lib/App/enman/Command/list.pm:60
 #, fuzzy
 msgid "Repositories enabled with enman:"
 msgstr "Mit enman wurden keine Repositorien installiert"
@@ -121,12 +121,12 @@ msgstr "'{query}' wird in der enman-Datenbank gesucht..."
 msgid "Listing all repositories available remotely"
 msgstr "Auf Ihrem System verfügbare Repositorien: "
 
-#: lib/App/enman/Command/search.pm:106
+#: lib/App/enman/Command/search.pm:109
 #, fuzzy, perl-brace-format
 msgid "Repository: {repository} - \"{description}\""
 msgstr "Repositorium: {repository}"
 
-#: lib/App/enman/Command/search.pm:118
+#: lib/App/enman/Command/search.pm:122
 msgid "Metadata not available online. Please try later"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enman\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-06 11:52+0200\n"
+"POT-Creation-Date: 2016-10-06 12:35+0200\n"
 "PO-Revision-Date: 2015-04-06 17:54+0000\n"
 "Last-Translator: necrose99 <mike@michaellawrenceit.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/enman/language/"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:41
+#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:45
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr "Root 権限で enman を実行する必要があります。"
@@ -70,15 +70,15 @@ msgstr "リポジトリファイルを書き込むことができません。: {
 msgid "{repo} installed in your system"
 msgstr "お使いのシステムで使用可能なリポジトリ："
 
-#: lib/App/enman/Command/list.pm:36
-msgid "You should at least supply --installed or --availables"
+#: lib/App/enman/Command/list.pm:39
+msgid "You should at least supply --installed or --available"
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:52
+#: lib/App/enman/Command/list.pm:56
 msgid "No repositories were installed with enman"
 msgstr "Enman とリポジトリがインストールされていません。"
 
-#: lib/App/enman/Command/list.pm:56
+#: lib/App/enman/Command/list.pm:60
 #, fuzzy
 msgid "Repositories enabled with enman:"
 msgstr "Enman とリポジトリがインストールされていません。"
@@ -125,12 +125,12 @@ msgstr "Enman db '{query}' を検索中."
 msgid "Listing all repositories available remotely"
 msgstr "お使いのシステムで使用可能なリポジトリ："
 
-#: lib/App/enman/Command/search.pm:106
+#: lib/App/enman/Command/search.pm:109
 #, fuzzy, perl-brace-format
 msgid "Repository: {repository} - \"{description}\""
 msgstr "リポジトリ: {repository}"
 
-#: lib/App/enman/Command/search.pm:118
+#: lib/App/enman/Command/search.pm:122
 msgid "Metadata not available online. Please try later"
 msgstr ""
 
