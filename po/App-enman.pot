@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: App-enman 1.0\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-06 00:23+0200\n"
+"POT-Creation-Date: 2016-10-06 11:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,60 +17,64 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/App/enman/Command/add.pm:23 lib/App/enman/Command/list.pm:40
+#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:41
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:27
+#: lib/App/enman/Command/add.pm:26
 #, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:33
+#: lib/App/enman/Command/add.pm:32
 msgid "You must supply the repository name"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:40
+#: lib/App/enman/Command/add.pm:39
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:46
+#: lib/App/enman/Command/add.pm:45
 #, perl-brace-format
 msgid "Repository: {repository}"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:51
+#: lib/App/enman/Command/add.pm:50
 #, perl-brace-format
 msgid "Configuration file: {config}"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:59
+#: lib/App/enman/Command/add.pm:58
 #, perl-brace-format
 msgid "No matches for '{repository}'"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:64
+#: lib/App/enman/Command/add.pm:63
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:71
+#: lib/App/enman/Command/add.pm:70
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:76
+#: lib/App/enman/Command/add.pm:75
 #, perl-brace-format
 msgid "{repo} installed in your system"
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:51
+#: lib/App/enman/Command/list.pm:36
+msgid "You should at least supply --installed or --availables"
+msgstr ""
+
+#: lib/App/enman/Command/list.pm:52
 msgid "No repositories were installed with enman"
 msgstr ""
 
-#: lib/App/enman/Command/list.pm:55
+#: lib/App/enman/Command/list.pm:56
 msgid "Repositories enabled with enman:"
 msgstr ""
 

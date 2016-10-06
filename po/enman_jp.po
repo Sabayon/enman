@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enman\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-06 00:23+0200\n"
+"POT-Creation-Date: 2016-10-06 11:52+0200\n"
 "PO-Revision-Date: 2015-04-06 17:54+0000\n"
 "Last-Translator: necrose99 <mike@michaellawrenceit.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/enman/language/"
@@ -19,62 +19,66 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: lib/App/enman/Command/add.pm:23 lib/App/enman/Command/list.pm:40
+#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:41
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr "Root 権限で enman を実行する必要があります。"
 
-#: lib/App/enman/Command/add.pm:27
+#: lib/App/enman/Command/add.pm:26
 #, fuzzy, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
 msgstr ""
 "リポジトリ '{repository}' お使いのシステムにインストールされているはありませ"
 "ん。"
 
-#: lib/App/enman/Command/add.pm:33
+#: lib/App/enman/Command/add.pm:32
 msgid "You must supply the repository name"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:40
+#: lib/App/enman/Command/add.pm:39
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
 msgstr "'{repository}' 1以上のリポジトリマッチ："
 
-#: lib/App/enman/Command/add.pm:46
+#: lib/App/enman/Command/add.pm:45
 #, perl-brace-format
 msgid "Repository: {repository}"
 msgstr "リポジトリ: {repository}"
 
-#: lib/App/enman/Command/add.pm:51
+#: lib/App/enman/Command/add.pm:50
 #, perl-brace-format
 msgid "Configuration file: {config}"
 msgstr "構成ファイル: {config}"
 
-#: lib/App/enman/Command/add.pm:59
+#: lib/App/enman/Command/add.pm:58
 #, perl-brace-format
 msgid "No matches for '{repository}'"
 msgstr "'{repository}' に対して一致なし"
 
-#: lib/App/enman/Command/add.pm:64
+#: lib/App/enman/Command/add.pm:63
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
 msgstr "'{repository}' お使いのシステムにインストールします。"
 
-#: lib/App/enman/Command/add.pm:71
+#: lib/App/enman/Command/add.pm:70
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
 msgstr "リポジトリファイルを書き込むことができません。: {error}"
 
-#: lib/App/enman/Command/add.pm:76
+#: lib/App/enman/Command/add.pm:75
 #, fuzzy, perl-brace-format
 msgid "{repo} installed in your system"
 msgstr "お使いのシステムで使用可能なリポジトリ："
 
-#: lib/App/enman/Command/list.pm:51
+#: lib/App/enman/Command/list.pm:36
+msgid "You should at least supply --installed or --availables"
+msgstr ""
+
+#: lib/App/enman/Command/list.pm:52
 msgid "No repositories were installed with enman"
 msgstr "Enman とリポジトリがインストールされていません。"
 
-#: lib/App/enman/Command/list.pm:55
+#: lib/App/enman/Command/list.pm:56
 #, fuzzy
 msgid "Repositories enabled with enman:"
 msgstr "Enman とリポジトリがインストールされていません。"

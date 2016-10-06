@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enman\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-06 00:23+0200\n"
+"POT-Creation-Date: 2016-10-06 11:52+0200\n"
 "PO-Revision-Date: 2015-04-06 17:51+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/enman/language/"
@@ -19,60 +19,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/App/enman/Command/add.pm:23 lib/App/enman/Command/list.pm:40
+#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:41
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr "Sie müssen enman mit root-Rechten ausführen"
 
-#: lib/App/enman/Command/add.pm:27
+#: lib/App/enman/Command/add.pm:26
 #, fuzzy, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
 msgstr "Es ist kein Repositorium '{repository}' auf Ihrem System installiert"
 
-#: lib/App/enman/Command/add.pm:33
+#: lib/App/enman/Command/add.pm:32
 msgid "You must supply the repository name"
 msgstr ""
 
-#: lib/App/enman/Command/add.pm:40
+#: lib/App/enman/Command/add.pm:39
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
 msgstr "Repositorium '{repository}' trifft auf mehr als eine zu:"
 
-#: lib/App/enman/Command/add.pm:46
+#: lib/App/enman/Command/add.pm:45
 #, perl-brace-format
 msgid "Repository: {repository}"
 msgstr "Repositorium: {repository}"
 
-#: lib/App/enman/Command/add.pm:51
+#: lib/App/enman/Command/add.pm:50
 #, perl-brace-format
 msgid "Configuration file: {config}"
 msgstr "Konfigurationsdatei: {config}"
 
-#: lib/App/enman/Command/add.pm:59
+#: lib/App/enman/Command/add.pm:58
 #, perl-brace-format
 msgid "No matches for '{repository}'"
 msgstr "Keine Treffer für '{repository}'"
 
-#: lib/App/enman/Command/add.pm:64
+#: lib/App/enman/Command/add.pm:63
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
 msgstr "'{repository}' wird auf Ihrem System installiert"
 
-#: lib/App/enman/Command/add.pm:71
+#: lib/App/enman/Command/add.pm:70
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
 msgstr "Kann Repositoriumsdatei nicht schreiben: {error}"
 
-#: lib/App/enman/Command/add.pm:76
+#: lib/App/enman/Command/add.pm:75
 #, fuzzy, perl-brace-format
 msgid "{repo} installed in your system"
 msgstr "Auf Ihrem System verfügbare Repositorien: "
 
-#: lib/App/enman/Command/list.pm:51
+#: lib/App/enman/Command/list.pm:36
+msgid "You should at least supply --installed or --availables"
+msgstr ""
+
+#: lib/App/enman/Command/list.pm:52
 msgid "No repositories were installed with enman"
 msgstr "Mit enman wurden keine Repositorien installiert"
 
-#: lib/App/enman/Command/list.pm:55
+#: lib/App/enman/Command/list.pm:56
 #, fuzzy
 msgid "Repositories enabled with enman:"
 msgstr "Mit enman wurden keine Repositorien installiert"
