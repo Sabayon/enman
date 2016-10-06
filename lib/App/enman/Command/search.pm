@@ -101,9 +101,10 @@ sub repository_search() {
     App::enman->instance->info( "=" x 6 )
       if App::enman->instance->loglevel ne "quiet";
     foreach my $match (@matches) {
-        if (App::enman->instance->loglevel eq "quiet") {
-            App::enman->instance->info($match->[0]);
-        } else {
+        if ( App::enman->instance->loglevel eq "quiet" ) {
+            App::enman->instance->info( $match->[0] );
+        }
+        else {
             App::enman->instance->info(
                 __x(
                     "Repository: {repository} - \"{description}\"",
