@@ -48,9 +48,8 @@ sub package_search() {
         )
     ) if App::enman->instance->loglevel ne "quiet";
     my @matches = &pkg_search($query);
-    App::enman->instance->notice(
+    App::enman->instance->fatal(
         __x( "No matches for '{query}'", query => $query ) )
-      and return 1
       if @matches == 0;
     App::enman->instance->notice(
         __x(
@@ -87,9 +86,8 @@ sub repository_search() {
     }
 
     my @matches = &db_search($query);
-    App::enman->instance->notice(
+    App::enman->instance->fatal(
         __x( "No matches for '{query}'", query => $query ) )
-      and return 1
       if @matches == 0;
     App::enman->instance->notice(
         __x(

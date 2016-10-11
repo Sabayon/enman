@@ -17,9 +17,8 @@ sub opt_spec {
 sub execute {
     my ( $self, $opt, $args ) = @_;
     App::enman->instance->loglevel("quiet") if $opt->{quiet};
-    App::enman->instance->error(
+    App::enman->instance->fatal(
         __("You must run enman with root permissions") )
-      and return 1
       if $> != 0;
 
     my $repo = App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
@@ -34,7 +33,7 @@ sub execute {
         unlink($repo);
     }
     else {
-        App::enman->instance->error(
+        App::enman->instance->fatal(
             __x(
 "There is no repository '{repository}' installed in your system",
                 repository => "@{$args}"

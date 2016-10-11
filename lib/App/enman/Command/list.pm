@@ -44,9 +44,8 @@ sub execute {
 }
 
 sub local_repositories {
-    App::enman->instance->error(
+    App::enman->instance->fatal(
         __("You must run enman with root permissions") )
-      and return 1
       if $> != 0;
     opendir( my $dir, App::enman::ETPREPO_DIR() ) or die $!;
 
@@ -55,9 +54,8 @@ sub local_repositories {
         next if ( $file =~ m/^\.|\.example|README/ );
         push( @enman_repos, $file ) if $file =~ App::enman::ETPSUFFIX();
     }
-    App::enman->instance->info(
+    App::enman->instance->fatal(
         __("No repositories were installed with enman") )
-      and return 1
       if ( @enman_repos == 0 );
 
     App::enman->instance->info( __("Repositories enabled with enman:") )

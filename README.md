@@ -1,10 +1,6 @@
 # NAME
 
-App::enman
-
-# VERSION
-
-version 1.3.3
+enman - a layman equivalent for entropy repositories
 
 # SYNOPSIS
 
@@ -25,10 +21,6 @@ version 1.3.3
 
 enman is the equivalent of layman for Sabayon, it allows you to easily add/remove/search repositories into your sabayon machine.
 
-# NAME
-
-enman - a layman equivalent for entropy repositories
-
 # COMMANDS
 
 ## add
@@ -45,15 +37,3 @@ It prints the repositories installed in the system, if `--available` or `-A` is 
 
 # FOR REPOSITORY MANTAINERS
 If you want your repository available thru enman, send a PR on the [Enman-db GitHub repository](https://github.com/Sabayon/enman-db)
-
-# AUTHOR
-
-mudler <mudler@sabayon.org>
-
-# COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2016 by Ettore Di Giacinto.
-
-This is free software, licensed under:
-
-    The GNU General Public License, Version 3, June 2007
