@@ -2,6 +2,7 @@ package App::enman;
 use strict;
 use warnings;
 use App::Cmd::Setup -app;
+
 use constant ETPREPO_DIR => $ENV{ETPREPO_DIR}
   || "/etc/entropy/repositories.conf.d/";
 use constant ENMAN_DB => $ENV{ENMAN_DB}
