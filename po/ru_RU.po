@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Ettore Di Giacinto
+# This file is distributed under the same license as the App-enman package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: App-enman 1.2\n"
+"Report-Msgid-Bugs-To: mudler@sabayon.org\n"
+"POT-Creation-Date: 2016-10-06 12:35+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Oleh Kolesnik <14igorv14@gmail.com>, 2016\n"
+"Language-Team: Russian (https://www.transifex.com/sabayon/teams/67913/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:45
+#: lib/App/enman/Command/remove.pm:21
+msgid "You must run enman with root permissions"
+msgstr "Вы должны запустисть enman с привелегиям суперпользователя"
+
+#: lib/App/enman/Command/add.pm:26
+#, perl-brace-format
+msgid "Repository '{repository}' already present in your system"
+msgstr "Репозиторий '{repository}' уже присутсвует в  вашей системе"
+
+#: lib/App/enman/Command/add.pm:32
+msgid "You must supply the repository name"
+msgstr "Вы должны указать имя репозитория"
+
+#: lib/App/enman/Command/add.pm:39
+#, perl-brace-format
+msgid "'{repository}' repository matches more than one:"
+msgstr "'{repository}' репозиторий соответствует более чем одному:"
+
+#: lib/App/enman/Command/add.pm:45
+#, perl-brace-format
+msgid "Repository: {repository}"
+msgstr "Репозиторий: {repository}"
+
+#: lib/App/enman/Command/add.pm:50
+#, perl-brace-format
+msgid "Configuration file: {config}"
+msgstr "Конфигурационный файл: {config}"
+
+#: lib/App/enman/Command/add.pm:58
+#, perl-brace-format
+msgid "No matches for '{repository}'"
+msgstr "Нет соответствий для '{repository}'"
+
+#: lib/App/enman/Command/add.pm:63
+#, perl-brace-format
+msgid "Installing '{repository}' in your system"
+msgstr "Установка '{repository}' в вашу систему"
+
+#: lib/App/enman/Command/add.pm:70
+#, perl-brace-format
+msgid "cannot write the repository file: {error}"
+msgstr "невозможно записать файл репозитория: {error}"
+
+#: lib/App/enman/Command/add.pm:75
+#, perl-brace-format
+msgid "{repo} installed in your system"
+msgstr "{repo} установлен в вашей системе"
+
+#: lib/App/enman/Command/list.pm:39
+msgid "You should at least supply --installed or --available"
+msgstr "Вы должны указать параметры как минимум --installed либо --available"
+
+#: lib/App/enman/Command/list.pm:56
+msgid "No repositories were installed with enman"
+msgstr "Нет установленных с помощью enman репозиториев"
+
+#: lib/App/enman/Command/list.pm:60
+msgid "Repositories enabled with enman:"
+msgstr "Репозитории задействованные и включенные с помощью enman:"
+
+#: lib/App/enman/Command/remove.pm:29
+#, perl-brace-format
+msgid "removing '{repo_name}' - '{repository}'"
+msgstr "удаление '{repo_name}' - '{repository}'"
+
+#: lib/App/enman/Command/remove.pm:39
+#, perl-brace-format
+msgid "There is no repository '{repository}' installed in your system"
+msgstr "Нет репозитория '{repository}' установленного в вашей системе "
+
+#: lib/App/enman/Command/search.pm:47
+#, perl-brace-format
+msgid "Searching '{query}' package on the Enman db..."
+msgstr "Поиск '{query}' пакета по Enman базе данных..."
+
+#: lib/App/enman/Command/search.pm:52 lib/App/enman/Command/search.pm:91
+#, perl-brace-format
+msgid "No matches for '{query}'"
+msgstr "Нет соотвествий для '{query}'"
+
+#: lib/App/enman/Command/search.pm:57 lib/App/enman/Command/search.pm:96
+#, perl-brace-format
+msgid "{matches} results for {query}"
+msgstr "{matches} результаты для {query}"
+
+#: lib/App/enman/Command/search.pm:67
+#, perl-brace-format
+msgid "{package} - repository: {repository} ({arch})"
+msgstr "{package} - репозиторий: {repository} ({arch})"
+
+#: lib/App/enman/Command/search.pm:80
+#, perl-brace-format
+msgid "Searching '{query}' on the Enman Database"
+msgstr "Поиск '{query}' по Базе Данных Enman "
+
+#: lib/App/enman/Command/search.pm:85
+msgid "Listing all repositories available remotely"
+msgstr "Перечень всех репозиториев доступных удалённо"
+
+#: lib/App/enman/Command/search.pm:109
+#, perl-brace-format
+msgid "Repository: {repository} - \"{description}\""
+msgstr "Репозиторий: {repository} - \"{description}\""
+
+#: lib/App/enman/Command/search.pm:122
+msgid "Metadata not available online. Please try later"
+msgstr "Метаданные не доступны в Интернете. Пожалуйста, попробуйте позднее"
