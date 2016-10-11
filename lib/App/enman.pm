@@ -9,7 +9,7 @@ use constant ENMAN_DB => $ENV{ENMAN_DB}
 use constant METADATA_DB => $ENV{METADATA_DB}
   || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "1.3.4";
+our $VERSION = "1.3.5";
 my $singleton;
 use Term::ANSIColor;
 use utf8;
@@ -105,7 +105,7 @@ App::enman
 
 =head1 VERSION
 
-version 1.3.4
+version 1.3.5
 
 =head1 SYNOPSIS
 
