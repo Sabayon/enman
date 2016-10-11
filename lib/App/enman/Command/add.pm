@@ -19,20 +19,16 @@ sub execute {
     my ( $self, $opts, $args ) = @_;
     App::enman->instance->loglevel("quiet") if $opt->{quiet};
 
-    App::enman->instance->error(
+    App::enman->instance->fatal(
         __("You must run enman with root permissions") )
-      and return 1
       if $> != 0;
-    App::enman->instance->info(
+    App::enman->instance->fatal(
         __x(
             "Repository '{repository}' already present in your system",
             repository => "@{$args}"
         )
-      )
-      and return 1
-      if -e App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
-    App::enman->instance->error( __("You must supply the repository name") )
-      and return 1
+    ) if -e App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
+    App::enman->instance->fatal( __("You must supply the repository name") )
       if @{$args} == 0;
 
     my @results = &App::enman::Command::search::db_search_config( @{$args} );
@@ -54,12 +50,11 @@ sub execute {
                   )
             );
         }
-        return 1;
+        exit 1;
     }
     elsif ( !$results[0] ) {
-        App::enman->instance->notice(
+        App::enman->instance->fatal(
             __x( "No matches for '{repository}'", repository => "@{$args}" ) );
-        return 1;
     }
     App::enman->instance->info(
         __x(
@@ -70,7 +65,8 @@ sub execute {
     my $repo_name = App::enman::ETPSUFFIX() . $results[0]->[0];
     my $repo      = get( $results[0]->[1] );
     open my $EREPO, ">" . App::enman::ETPREPO_DIR() . $repo_name
-      or die( __x( "cannot write the repository file: {error}", error => $! ) );
+      or App::enman->instance->fatal(
+        __x( "cannot write the repository file: {error}", error => $! ) );
     binmode $EREPO, ":utf8";
     print $EREPO $repo;
     close($EREPO);
