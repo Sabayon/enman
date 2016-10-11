@@ -1,141 +1,127 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR "mudler"
-# This file is distributed under the same license as the PACKAGE package.
-#
-# Translators:
-# necrose99 <mike@michaellawrenceit.com>, 2015
+# Copyright (C) YEAR Ettore Di Giacinto
+# This file is distributed under the same license as the App-enman package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: enman\n"
+"Project-Id-Version: App-enman 1.2\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
 "POT-Creation-Date: 2016-10-06 12:35+0200\n"
-"PO-Revision-Date: 2015-04-06 17:51+0000\n"
-"Last-Translator: necrose99 <mike@michaellawrenceit.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/enman/language/"
-"es/)\n"
-"Language: es\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: \n"
 
 #: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:45
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
-msgstr "Debe ejecutar enman con permisos de root"
+msgstr "You must run enman with root permissions"
 
 #: lib/App/enman/Command/add.pm:26
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
-msgstr ""
-"No hay ningún repositorio 'repositorio de {repository}' instalado en su "
-"sistema"
+msgstr "Repository '{repository}' already present in your system"
 
 #: lib/App/enman/Command/add.pm:32
 msgid "You must supply the repository name"
-msgstr ""
+msgstr "You must supply the repository name"
 
 #: lib/App/enman/Command/add.pm:39
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
-msgstr "más de uno coincide con '{repository}'  repositorio:"
+msgstr "'{repository}' repository matches more than one:"
 
 #: lib/App/enman/Command/add.pm:45
 #, perl-brace-format
 msgid "Repository: {repository}"
-msgstr "Repositorio: {repository}"
+msgstr "Repository: {repository}"
 
 #: lib/App/enman/Command/add.pm:50
 #, perl-brace-format
 msgid "Configuration file: {config}"
-msgstr "Archivo de configuración: {config}"
+msgstr "Configuration file: {config}"
 
 #: lib/App/enman/Command/add.pm:58
 #, perl-brace-format
 msgid "No matches for '{repository}'"
-msgstr "No hay partidos para  '{repository}'"
+msgstr "No matches for '{repository}'"
 
 #: lib/App/enman/Command/add.pm:63
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
-msgstr "Instalación de '{repository}' en el sistema"
+msgstr "Installing '{repository}' in your system"
 
 #: lib/App/enman/Command/add.pm:70
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
-msgstr "No se puede escribir el archivo del repositorio: {error}"
+msgstr "cannot write the repository file: {error}"
 
 #: lib/App/enman/Command/add.pm:75
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "{repo} installed in your system"
-msgstr "Repositorios disponibles en el sistema: "
+msgstr "{repo} installed in your system"
 
 #: lib/App/enman/Command/list.pm:39
 msgid "You should at least supply --installed or --available"
-msgstr ""
+msgstr "You should at least supply --installed or --available"
 
 #: lib/App/enman/Command/list.pm:56
 msgid "No repositories were installed with enman"
-msgstr "No hay repositorios se instalaron con enman"
+msgstr "No repositories were installed with enman"
 
 #: lib/App/enman/Command/list.pm:60
-#, fuzzy
 msgid "Repositories enabled with enman:"
-msgstr "No hay repositorios se instalaron con enman"
+msgstr "Repositories enabled with enman:"
 
 #: lib/App/enman/Command/remove.pm:29
 #, perl-brace-format
 msgid "removing '{repo_name}' - '{repository}'"
-msgstr "extraer '{repo_name}' - '{repository}'"
+msgstr "removing '{repo_name}' - '{repository}'"
 
 #: lib/App/enman/Command/remove.pm:39
 #, perl-brace-format
 msgid "There is no repository '{repository}' installed in your system"
-msgstr ""
-"No hay ningún repositorio 'repositorio de {repository}' instalado en su "
-"sistema"
+msgstr "There is no repository '{repository}' installed in your system"
 
 #: lib/App/enman/Command/search.pm:47
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "Searching '{query}' package on the Enman db..."
-msgstr "Buscar '{query}' en el db enman..."
+msgstr "Searching '{query}' package on the Enman db..."
 
 #: lib/App/enman/Command/search.pm:52 lib/App/enman/Command/search.pm:91
 #, perl-brace-format
 msgid "No matches for '{query}'"
-msgstr "No hay partidos para '{query}'"
+msgstr "No matches for '{query}'"
 
 #: lib/App/enman/Command/search.pm:57 lib/App/enman/Command/search.pm:96
 #, perl-brace-format
 msgid "{matches} results for {query}"
-msgstr "resultados {matches} para consulta de {query}"
+msgstr "{matches} results for {query}"
 
 #: lib/App/enman/Command/search.pm:67
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "{package} - repository: {repository} ({arch})"
-msgstr "Repositorio: {repository}"
+msgstr "{package} - repository: {repository} ({arch})"
 
 #: lib/App/enman/Command/search.pm:80
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "Searching '{query}' on the Enman Database"
-msgstr "Buscar '{query}' en el db enman..."
+msgstr "Searching '{query}' on the Enman Database"
 
 #: lib/App/enman/Command/search.pm:85
-#, fuzzy
 msgid "Listing all repositories available remotely"
-msgstr "Repositorios disponibles en el sistema: "
+msgstr "Listing all repositories available remotely"
 
 #: lib/App/enman/Command/search.pm:109
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "Repository: {repository} - \"{description}\""
-msgstr "Repositorio: {repository}"
+msgstr "Repository: {repository} - \"{description}\""
 
 #: lib/App/enman/Command/search.pm:122
 msgid "Metadata not available online. Please try later"
-msgstr ""
-
-#~ msgid ""
-#~ "Repositories enabled with enman: (so you can remove it with enman <name>)"
-#~ msgstr ""
-#~ "Repositorios habilitados con enman: (por lo que se puede quitar con enman "
-#~ "<name>)"
+msgstr "Metadata not available online. Please try later"

@@ -10,120 +10,120 @@ msgstr ""
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
 "POT-Creation-Date: 2016-10-06 12:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Ettore Di Giacinto <mudler@dark-lab.net>, 2016\n"
-"Language-Team: Italian (https://www.transifex.com/sabayon/teams/67913/it/)\n"
+"Last-Translator: Theofilos Intzoglou <int.teo@gmail.com>, 2016\n"
+"Language-Team: Greek (https://www.transifex.com/sabayon/teams/67913/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: it\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:45
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
-msgstr "Devi essere root per avviare enman"
+msgstr "Πρέπει να εκτελέσετε το enman με δικαιώματα root"
 
 #: lib/App/enman/Command/add.pm:26
 #, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
-msgstr "La repository '{repository}' è già installata nel sistema"
+msgstr "Το αποθετήριο '{repository}' υπάρχει ήδη στο σύστημά σας"
 
 #: lib/App/enman/Command/add.pm:32
 msgid "You must supply the repository name"
-msgstr "Devi specificare il nome della repository"
+msgstr "Πρέπει να δώσετε όνομα αποθετηρίου"
 
 #: lib/App/enman/Command/add.pm:39
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
-msgstr "'{repository}' ha prodotto più risultati:"
+msgstr "Το '{repository}' αποθετήριο ταιριάζει με περισσότερα από ένα:"
 
 #: lib/App/enman/Command/add.pm:45
 #, perl-brace-format
 msgid "Repository: {repository}"
-msgstr "Repository: {repository}"
+msgstr "Αποθετήριο: {repository}"
 
 #: lib/App/enman/Command/add.pm:50
 #, perl-brace-format
 msgid "Configuration file: {config}"
-msgstr "File di configurazione: {config}"
+msgstr "Αρχείο ρυθμίσεων: {config}"
 
 #: lib/App/enman/Command/add.pm:58
 #, perl-brace-format
 msgid "No matches for '{repository}'"
-msgstr "Nessun risultato per '{repository}'"
+msgstr "Κανένα ταίριασμα για '{repository}'"
 
 #: lib/App/enman/Command/add.pm:63
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
-msgstr "La repository '{repository}' è stata installata nel tuo sistema"
+msgstr "Εγκατάσταση '{repository}' στο σύστημά σας"
 
 #: lib/App/enman/Command/add.pm:70
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
-msgstr "Non posso scrivere nel file della repository: {error}"
+msgstr "δεν είναι δυνατή η εγγραφή του αρχείου αποθετηρίου: {error}"
 
 #: lib/App/enman/Command/add.pm:75
 #, perl-brace-format
 msgid "{repo} installed in your system"
-msgstr "{repo} installata nel tuo sistema"
+msgstr "Το {repo} είναι εγκατεστημένο στο σύστημά σας"
 
 #: lib/App/enman/Command/list.pm:39
 msgid "You should at least supply --installed or --available"
-msgstr "Devi aggiungere almeno --installed o --available al comando"
+msgstr "Πρέπει να χρησιμοποιήσετε τουλάχιστον το --installed ή το --available"
 
 #: lib/App/enman/Command/list.pm:56
 msgid "No repositories were installed with enman"
-msgstr "Non ci sono repositories installate con enman"
+msgstr "Κανένα αποθετήριο δεν εγκαταστάθηκε με το enman"
 
 #: lib/App/enman/Command/list.pm:60
 msgid "Repositories enabled with enman:"
-msgstr "Repositories abilitati con enman:"
+msgstr "Αποθετήρια ενεργοποιημένα με το enman:"
 
 #: lib/App/enman/Command/remove.pm:29
 #, perl-brace-format
 msgid "removing '{repo_name}' - '{repository}'"
-msgstr "rimozione '{repo_name}' - '{repository}'"
+msgstr "αφαίρεση '{repo_name}' - '{repository}'"
 
 #: lib/App/enman/Command/remove.pm:39
 #, perl-brace-format
 msgid "There is no repository '{repository}' installed in your system"
-msgstr "Non c'è nessuna repository '{repository}' installata nel tuo sistema"
+msgstr "Δεν υπάρχει αποθετήριο '{repository}' εγκατεστημένο στο σύστημά σας"
 
 #: lib/App/enman/Command/search.pm:47
 #, perl-brace-format
 msgid "Searching '{query}' package on the Enman db..."
-msgstr "Cerco il pacchetto '{query}' nel database di Enman"
+msgstr "Αναζήτηση για πακέτο '{query}' στην ΒΔ του Enman"
 
 #: lib/App/enman/Command/search.pm:52 lib/App/enman/Command/search.pm:91
 #, perl-brace-format
 msgid "No matches for '{query}'"
-msgstr "Nessuna corrispondenza per '{query}'"
+msgstr "Δεν βρέθηκαν ταιριάσματα για '{query}'"
 
 #: lib/App/enman/Command/search.pm:57 lib/App/enman/Command/search.pm:96
 #, perl-brace-format
 msgid "{matches} results for {query}"
-msgstr "{matches} risultati per '{query}'"
+msgstr "{matches} αποτελέσματα για {query}"
 
 #: lib/App/enman/Command/search.pm:67
 #, perl-brace-format
 msgid "{package} - repository: {repository} ({arch})"
-msgstr "{package} - repository: {repository} ({arch})"
+msgstr "{package} - αποθετήριο: {repository} ({arch})"
 
 #: lib/App/enman/Command/search.pm:80
 #, perl-brace-format
 msgid "Searching '{query}' on the Enman Database"
-msgstr "Cerco la repository '{query}' nel database di Enman"
+msgstr "Αναζήτηση για '{query}' στην Βάση Δεδομένων του Enman"
 
 #: lib/App/enman/Command/search.pm:85
 msgid "Listing all repositories available remotely"
-msgstr "Le repository disponibili in remoto per essere installate"
+msgstr "Εμφάνιση όλων των αποθετηρίων που είναι διαθέσιμα εξ αποστάσεως"
 
 #: lib/App/enman/Command/search.pm:109
 #, perl-brace-format
 msgid "Repository: {repository} - \"{description}\""
-msgstr "Repository: {repository} - \"{description}\""
+msgstr "Αποθετήριο: {repository} - \"{description}\""
 
 #: lib/App/enman/Command/search.pm:122
 msgid "Metadata not available online. Please try later"
 msgstr ""
-"Metadata non disponibile online attualmente. Per favore, ritenta tra poco"
+"Τα μεταδεδομένα δεν είναι διαθέσιμα online. Παρακαλούμε δοκιμάστε αργότερα."
