@@ -47,8 +47,8 @@ sub error {
 }
 
 sub fatal {
-  &error(@_);
-  exit 1;
+    &error(@_);
+    exit 1;
 }
 
 sub info {

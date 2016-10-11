@@ -27,8 +27,7 @@ sub execute {
             "Repository '{repository}' already present in your system",
             repository => "@{$args}"
         )
-      )
-      if -e App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
+    ) if -e App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
     App::enman->instance->fatal( __("You must supply the repository name") )
       if @{$args} == 0;
 
@@ -66,7 +65,8 @@ sub execute {
     my $repo_name = App::enman::ETPSUFFIX() . $results[0]->[0];
     my $repo      = get( $results[0]->[1] );
     open my $EREPO, ">" . App::enman::ETPREPO_DIR() . $repo_name
-      or App::enman->instance->fatal( __x( "cannot write the repository file: {error}", error => $! ) );
+      or App::enman->instance->fatal(
+        __x( "cannot write the repository file: {error}", error => $! ) );
     binmode $EREPO, ":utf8";
     print $EREPO $repo;
     close($EREPO);
