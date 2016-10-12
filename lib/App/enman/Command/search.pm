@@ -58,10 +58,10 @@ sub package_search() {
             query   => $query
         )
     ) if App::enman->instance->loglevel ne "quiet";
-    App::enman->instance->info( "=" x 6 )
+    App::enman->instance->notice( "=" x 6 )
       if App::enman->instance->loglevel ne "quiet";
     foreach my $match (@matches) {
-        App::enman->instance->info(
+        App::enman->instance->notice(
             __x(
                 "{package} - repository: {repository} ({arch})",
                 repository => $match->[0],
@@ -96,14 +96,14 @@ sub repository_search() {
             query   => $query
         )
     ) if ( $query ne "" );
-    App::enman->instance->info( "=" x 6 )
+    App::enman->instance->notice( "=" x 6 )
       if App::enman->instance->loglevel ne "quiet";
     foreach my $match (@matches) {
         if ( App::enman->instance->loglevel eq "quiet" ) {
             App::enman->instance->info( $match->[0] );
         }
         else {
-            App::enman->instance->info(
+            App::enman->instance->notice(
                 __x(
                     "Repository: {repository} - \"{description}\"",
                     repository  => $match->[0],

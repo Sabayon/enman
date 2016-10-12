@@ -1,6 +1,18 @@
 #!/usr/bin/perl
 # PODNAME: enman
+use v5.14;
+use POSIX qw(setlocale);
+use warnings;
+use strict;
+use utf8;
+
+BEGIN {
+    setlocale POSIX::LC_ALL, '';
+}
+use Locale::TextDomain 'App-enman';
+$| = 1;
 use App::enman;
+
 App::enman->run;
 1;
 
@@ -16,7 +28,7 @@ enman
 
 =head1 VERSION
 
-version 1.3.5
+version 1.3.6
 
 =head1 SYNOPSIS
 

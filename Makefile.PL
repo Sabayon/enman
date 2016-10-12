@@ -23,7 +23,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "gpl",
   "NAME" => "App::enman",
   "PREREQ_PM" => {},
-  "VERSION" => "1.3.5",
+  "VERSION" => "1.3.6",
   "test" => {
     "TESTS" => "t/*.t"
   }
