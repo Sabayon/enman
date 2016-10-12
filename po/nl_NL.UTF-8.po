@@ -1,19 +1,19 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Ettore Di Giacinto
+# Dutch language translation of enman
+# Copyright (C) 2016 Ettore Di Giacinto
 # This file is distributed under the same license as the App-enman package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# Ettore Di Giacinto <mudler@sabayon.org>, 2016
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: App-enman 1.2\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
 "POT-Creation-Date: 2016-10-06 12:35+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-10-12 19:05+0200\n"
 "Last-Translator: joostruis <joostruis@gmail.com>, 2016\n"
 "Language-Team: Dutch (https://www.transifex.com/sabayon/teams/67913/nl/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"

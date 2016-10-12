@@ -1,18 +1,18 @@
 #!/usr/bin/perl
 # PODNAME: enman
-use App::enman;
-use utf8;
+use v5.14;
+use POSIX qw(setlocale);
 use warnings;
 use strict;
-use Locale::TextDomain 'App-enman';
-use v5.14;  # optimal for unicode string feature
-
-use POSIX qw(setlocale);
-binmode STDOUT, ':utf8';
+use utf8;
 
 BEGIN {
     setlocale POSIX::LC_ALL, '';
 }
+use Locale::TextDomain 'App-enman';
+$| = 1;
+use App::enman;
+
 App::enman->run;
 1;
 __END__
