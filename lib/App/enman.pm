@@ -11,7 +11,7 @@ use constant ENMAN_DB => $ENV{ENMAN_DB}
 use constant METADATA_DB => $ENV{METADATA_DB}
   || "http://mirror.de.sabayon.org/community/metadata.json";
 use constant ETPSUFFIX => "entropy_enman_";
-our $VERSION = "1.3.5";
+our $VERSION = "1.3.6";
 my $singleton;
 use Term::ANSIColor;
 use Encode;
@@ -34,7 +34,7 @@ sub error {
     my @msg  = @_;
     if ( $self->{LOG_LEVEL} eq "info" ) {
         print STDERR color 'bold red';
-        print STDERR encode_utf8('☢☢☢ ☛  ');
+        print STDERR encode_utf8('☢☢☢ ☛    ');
         print STDERR color 'bold magenta';
         print STDERR join( "\n", @msg ), "\n";
         print STDERR color 'reset';
@@ -54,7 +54,7 @@ sub info {
     my @msg = @_;
     if ( $self->{LOG_LEVEL} eq "info" ) {
         print color 'bold green';
-        print encode_utf8('╠ ');
+        print encode_utf8('╠   ');
         print color 'bold blue';
         print join( "\n", @msg ), "\n";
         print color 'reset';
@@ -69,7 +69,7 @@ sub notice {
     my @msg  = @_;
     if ( $self->{LOG_LEVEL} eq "info" ) {
         print STDERR color 'bold yellow';
-        print STDERR encode_utf8('☛ ');
+        print STDERR encode_utf8('☛   ');
         print STDERR color 'bold green';
         print STDERR join( "\n", @msg ), "\n";
         print STDERR color 'reset';
