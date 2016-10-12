@@ -8,83 +8,83 @@ msgid ""
 msgstr ""
 "Project-Id-Version: App-enman 1.2\n"
 "Report-Msgid-Bugs-To: mudler@sabayon.org\n"
-"POT-Creation-Date: 2016-10-06 12:35+0200\n"
+"POT-Creation-Date: 2016-10-12 19:39+0200\n"
 "PO-Revision-Date: 2016-10-12 19:05+0200\n"
 "Last-Translator: joostruis <joostruis@gmail.com>, 2016\n"
 "Language-Team: Dutch (https://www.transifex.com/sabayon/teams/67913/nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: lib/App/enman/Command/add.pm:22 lib/App/enman/Command/list.pm:45
+#: lib/App/enman/Command/add.pm:23 lib/App/enman/Command/list.pm:48
 #: lib/App/enman/Command/remove.pm:21
 msgid "You must run enman with root permissions"
 msgstr "Je moet enman uitvoeren als root"
 
-#: lib/App/enman/Command/add.pm:26
+#: lib/App/enman/Command/add.pm:27
 #, perl-brace-format
 msgid "Repository '{repository}' already present in your system"
 msgstr "Repository '{repository}' reeds geïnstalleerd op uw systeem"
 
-#: lib/App/enman/Command/add.pm:32
+#: lib/App/enman/Command/add.pm:31
 msgid "You must supply the repository name"
 msgstr "Je moet een naam opgeven"
 
-#: lib/App/enman/Command/add.pm:39
+#: lib/App/enman/Command/add.pm:38
 #, perl-brace-format
 msgid "'{repository}' repository matches more than one:"
 msgstr "'{repository}' geeft meer dan één resultaat:"
 
-#: lib/App/enman/Command/add.pm:45
+#: lib/App/enman/Command/add.pm:44
 #, perl-brace-format
 msgid "Repository: {repository}"
 msgstr "Repository: {repository}"
 
-#: lib/App/enman/Command/add.pm:50
+#: lib/App/enman/Command/add.pm:49
 #, perl-brace-format
 msgid "Configuration file: {config}"
 msgstr "Configuratiebestand: {config}"
 
-#: lib/App/enman/Command/add.pm:58
+#: lib/App/enman/Command/add.pm:57
 #, perl-brace-format
 msgid "No matches for '{repository}'"
 msgstr "Geen resultaten voor '{repository}'"
 
-#: lib/App/enman/Command/add.pm:63
+#: lib/App/enman/Command/add.pm:61
 #, perl-brace-format
 msgid "Installing '{repository}' in your system"
 msgstr "Installeer '{repository}' op uw systeem"
 
-#: lib/App/enman/Command/add.pm:70
+#: lib/App/enman/Command/add.pm:69
 #, perl-brace-format
 msgid "cannot write the repository file: {error}"
 msgstr "kan niet schrijven naar repository bestand: {error}"
 
-#: lib/App/enman/Command/add.pm:75
+#: lib/App/enman/Command/add.pm:74
 #, perl-brace-format
 msgid "{repo} installed in your system"
 msgstr "{repo} geïnstalleerd op uw systeem"
 
-#: lib/App/enman/Command/list.pm:39
+#: lib/App/enman/Command/list.pm:42
 msgid "You should at least supply --installed or --available"
 msgstr "Gebruik op zijn minst --installed of --available"
 
-#: lib/App/enman/Command/list.pm:56
+#: lib/App/enman/Command/list.pm:58
 msgid "No repositories were installed with enman"
 msgstr "Er werden géén repositories geïnstalleerd met enman"
 
-#: lib/App/enman/Command/list.pm:60
+#: lib/App/enman/Command/list.pm:61
 msgid "Repositories enabled with enman:"
 msgstr "Repositories ingeschakeld met enman:"
 
-#: lib/App/enman/Command/remove.pm:29
+#: lib/App/enman/Command/remove.pm:28
 #, perl-brace-format
 msgid "removing '{repo_name}' - '{repository}'"
 msgstr "verwijderen van '{repo_name}' - '{repository}'"
 
-#: lib/App/enman/Command/remove.pm:39
+#: lib/App/enman/Command/remove.pm:38
 #, perl-brace-format
 msgid "There is no repository '{repository}' installed in your system"
 msgstr "Er is géén repository '{repository}' geïnstalleerd op uw systeem"
@@ -94,35 +94,35 @@ msgstr "Er is géén repository '{repository}' geïnstalleerd op uw systeem"
 msgid "Searching '{query}' package on the Enman db..."
 msgstr "Zoeken naar '{query}' pakket in de Enman database..."
 
-#: lib/App/enman/Command/search.pm:52 lib/App/enman/Command/search.pm:91
+#: lib/App/enman/Command/search.pm:52 lib/App/enman/Command/search.pm:90
 #, perl-brace-format
 msgid "No matches for '{query}'"
 msgstr "Geen resultaten voor '{query}'"
 
-#: lib/App/enman/Command/search.pm:57 lib/App/enman/Command/search.pm:96
+#: lib/App/enman/Command/search.pm:56 lib/App/enman/Command/search.pm:94
 #, perl-brace-format
 msgid "{matches} results for {query}"
 msgstr "{matches} resultaten voor {query}"
 
-#: lib/App/enman/Command/search.pm:67
+#: lib/App/enman/Command/search.pm:66
 #, perl-brace-format
 msgid "{package} - repository: {repository} ({arch})"
 msgstr "{package} - repository: {repository} ({arch})"
 
-#: lib/App/enman/Command/search.pm:80
+#: lib/App/enman/Command/search.pm:79
 #, perl-brace-format
 msgid "Searching '{query}' on the Enman Database"
 msgstr "Zoeken naar '{query}' in de Enman database..."
 
-#: lib/App/enman/Command/search.pm:85
+#: lib/App/enman/Command/search.pm:84
 msgid "Listing all repositories available remotely"
 msgstr "Lijst ophalen met beschikbare repositories"
 
-#: lib/App/enman/Command/search.pm:109
+#: lib/App/enman/Command/search.pm:108
 #, perl-brace-format
 msgid "Repository: {repository} - \"{description}\""
 msgstr "Repository: {repository} - \"{description}\""
 
-#: lib/App/enman/Command/search.pm:122
+#: lib/App/enman/Command/search.pm:121
 msgid "Metadata not available online. Please try later"
 msgstr "Metadata is online niet beschikbaar. Probeer het later opnieuw"
