@@ -36,11 +36,11 @@ sub error {
         print STDERR color 'bold red';
         print STDERR encode_utf8('☢☢☢ ☛    ');
         print STDERR color 'bold magenta';
-        print STDERR join( "\n", @msg ), "\n";
+        print STDERR encode_utf8(join( "\n", @msg )), "\n";
         print STDERR color 'reset';
     }
     elsif ( $self->{LOG_LEVEL} eq "quiet" ) {
-        print join( "\n", @msg ), "\n";
+        print encode_utf8(join( "\n", @msg )), "\n";
     }
 }
 
@@ -56,11 +56,11 @@ sub info {
         print color 'bold green';
         print encode_utf8('╠   ');
         print color 'bold blue';
-        print join( "\n", @msg ), "\n";
+        print encode_utf8(join( "\n", @msg )), "\n";
         print color 'reset';
     }
     elsif ( $self->{LOG_LEVEL} eq "quiet" ) {
-        print join( "\n", @msg ), "\n";
+        print encode_utf8(join( "\n", @msg )), "\n";
     }
 }
 
@@ -71,11 +71,11 @@ sub notice {
         print STDERR color 'bold yellow';
         print STDERR encode_utf8('☛   ');
         print STDERR color 'bold green';
-        print STDERR join( "\n", @msg ), "\n";
+        print STDERR encode_utf8(join( "\n", @msg )), "\n";
         print STDERR color 'reset';
     }
     elsif ( $self->{LOG_LEVEL} eq "quiet" ) {
-        print STDERR join( "\n", @msg ), "\n";
+        print STDERR encode_utf8(join( "\n", @msg )), "\n";
     }
 }
 

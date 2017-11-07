@@ -4,6 +4,7 @@ use App::enman -command;
 use App::enman::Command::search;
 use Locale::TextDomain 'App-enman';
 use App::enman;
+use Encode;
 sub abstract { "List repositories installed in the system" }
 
 sub description {
@@ -39,7 +40,7 @@ sub execute {
     }
     else {
         $self->usage_error(
-            __("You should at least supply --installed or --available") );
+            encode_utf8(__("You should at least supply --installed or --available")) );
     }
 }
 
