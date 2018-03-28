@@ -5,12 +5,13 @@ use utf8;
 
 use App::Cmd::Setup -app;
 use constant ETPREPO_DIR => $ENV{ETPREPO_DIR}
-  || "/etc/entropy/repositories.conf.d/";
+    || "/etc/entropy/repositories.conf.d/";
 use constant ENMAN_DB => $ENV{ENMAN_DB}
-  || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
+    || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
 use constant METADATA_DB => $ENV{METADATA_DB}
-  || "http://mirror.de.sabayon.org/community/metadata.json";
-use constant ETPSUFFIX => "entropy_enman_";
+    || "http://mirror.de.sabayon.org/community/metadata.json";
+use constant ESUFFIX   => "entropy_";
+use constant ETPSUFFIX => ESUFFIX() . "enman_";
 our $VERSION = "1.3.6";
 my $singleton;
 use Term::ANSIColor;
@@ -51,7 +52,7 @@ sub fatal {
 
 sub info {
     my $self = shift;
-    my @msg = @_;
+    my @msg  = @_;
     if ( $self->{LOG_LEVEL} eq "info" ) {
         print color 'bold green';
         print encode_utf8('╠   ');
