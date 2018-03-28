@@ -4,7 +4,7 @@ use App::enman -command;
 use Locale::TextDomain 'App-enman';
 use App::enman;
 
-sub abstract { "Removes repositories in the system installed by enman" }
+sub abstract {"Removes repositories in the system installed by enman"}
 
 sub description {
     "Removes repositories in the system installed by enman";
@@ -19,13 +19,13 @@ sub execute {
     App::enman->instance->loglevel("quiet") if $opt->{quiet};
     App::enman->instance->fatal(
         __("You must run enman with root permissions") )
-      if $> != 0;
+        if $> != 0;
 
-    my $repo = App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
+    my $repo =
+        App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . "@{$args}";
     if ( -e $repo ) {
         App::enman->instance->info(
-            __x(
-                "removing '{repo_name}' - '{repository}'",
+            __x("removing '{repo_name}' - '{repository}'",
                 repo_name  => "@{$args}",
                 repository => $repo
             )
@@ -34,8 +34,7 @@ sub execute {
     }
     else {
         App::enman->instance->fatal(
-            __x(
-"There is no repository '{repository}' installed in your system",
+            __x("There is no repository '{repository}' installed in your system",
                 repository => "@{$args}"
             )
         );

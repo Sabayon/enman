@@ -19,7 +19,7 @@ my %module_build_args = (
     "mudler <mudler\@sabayon.org>"
   ],
   "dist_name" => "App-enman",
-  "dist_version" => "1.3.6",
+  "dist_version" => "1.3.7",
   "license" => "gpl",
   "module_name" => "App::enman",
   "recursive_test_files" => 1,

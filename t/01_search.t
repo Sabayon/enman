@@ -11,8 +11,7 @@ is_deeply(
 );
 is_deeply(
     &App::enman::Command::search::db_search_config("community"),
-    [
-        'community',
+    [   'community',
         'https://github.com/Sabayon/enman-db/raw/master/repositories/community'
     ],
     "Searching config of community repository inside repositories list"

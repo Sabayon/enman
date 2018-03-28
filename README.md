@@ -4,7 +4,7 @@ App::enman
 
 # VERSION
 
-version 1.3.6
+version 1.3.7
 
 # SYNOPSIS
 
@@ -52,7 +52,7 @@ mudler <mudler@sabayon.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2016 by Ettore Di Giacinto.
+This software is Copyright (c) 2018 by Ettore Di Giacinto.
 
 This is free software, licensed under:
 

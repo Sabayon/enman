@@ -5,14 +5,14 @@ use utf8;
 
 use App::Cmd::Setup -app;
 use constant ETPREPO_DIR => $ENV{ETPREPO_DIR}
-    || "/etc/entropy/repositories.conf.d/";
+  || "/etc/entropy/repositories.conf.d/";
 use constant ENMAN_DB => $ENV{ENMAN_DB}
-    || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
+  || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
 use constant METADATA_DB => $ENV{METADATA_DB}
-    || "http://mirror.de.sabayon.org/community/metadata.json";
-use constant ESUFFIX   => "entropy_";
-use constant ETPSUFFIX => ESUFFIX() . "enman_";
-our $VERSION = "1.3.7";
+  || "http://mirror.de.sabayon.org/community/metadata.json";
+use constant ESUFFIX => "entropy_";
+use constant ETPSUFFIX => ESUFFIX()."enman_";
+our $VERSION = "1.3.6";
 my $singleton;
 use Term::ANSIColor;
 use Encode;
@@ -52,7 +52,7 @@ sub fatal {
 
 sub info {
     my $self = shift;
-    my @msg  = @_;
+    my @msg = @_;
     if ( $self->{LOG_LEVEL} eq "info" ) {
         print color 'bold green';
         print encode_utf8('╠   ');
@@ -90,20 +90,13 @@ sub loglevel {
 *instance = \&new;
 
 1;
-
 __END__
-
-=pod
 
 =encoding utf-8
 
 =head1 NAME
 
-App::enman
-
-=head1 VERSION
-
-version 1.3.7
+enman - a layman equivalent for entropy repositories
 
 =head1 SYNOPSIS
 
@@ -124,10 +117,6 @@ version 1.3.7
 
 enman is the equivalent of layman for Sabayon, it allows you to easily add/remove/search repositories into your sabayon machine.
 
-=head1 NAME
-
-enman - a layman equivalent for entropy repositories
-
 =head1 COMMANDS
 
 =head2 add
@@ -144,17 +133,3 @@ It prints the repositories installed in the system, if C<--available> or C<-A> i
 
 =head1 FOR REPOSITORY MANTAINERS
 If you want your repository available thru enman, send a PR on the L<Enman-db GitHub repository|https://github.com/Sabayon/enman-db>
-
-=head1 AUTHOR
-
-mudler <mudler@sabayon.org>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2018 by Ettore Di Giacinto.
-
-This is free software, licensed under:
-
-  The GNU General Public License, Version 3, June 2007
-
-=cut

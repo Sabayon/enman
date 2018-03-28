@@ -4,7 +4,7 @@ use App::enman -command;
 use App::enman::Command::search;
 use Locale::TextDomain 'App-enman';
 use App::enman;
-sub abstract { "List repositories installed in the system" }
+sub abstract {"List repositories installed in the system"}
 
 sub description {
     "Lists repositories file installed in the machine";
@@ -12,8 +12,7 @@ sub description {
 
 sub opt_spec {
     return (
-        [
-            "available|A",
+        [   "available|A",
             "Shows the list of the available remote repositories"
         ],
         [ "installed|I", "Shows the list of the installed repositories" ],
@@ -46,7 +45,7 @@ sub execute {
 sub local_repositories {
     App::enman->instance->fatal(
         __("You must run enman with root permissions") )
-      if $> != 0;
+        if $> != 0;
     opendir( my $dir, App::enman::ETPREPO_DIR() ) or die $!;
 
     my @enman_repos;
@@ -56,10 +55,10 @@ sub local_repositories {
     }
     App::enman->instance->fatal(
         __("No repositories were installed with enman") )
-      if ( @enman_repos == 0 );
+        if ( @enman_repos == 0 );
 
     App::enman->instance->info( __("Repositories enabled with enman:") )
-      if App::enman->instance->loglevel ne "quiet";
+        if App::enman->instance->loglevel ne "quiet";
     my $etpsuffix = App::enman::ETPSUFFIX;    #faster since gets compiled
     foreach my $repo (@enman_repos) {
         $repo =~ s/${etpsuffix}//g;

@@ -6,17 +6,16 @@ use LWP::Simple;
 use Locale::TextDomain 'App-enman';
 use JSON;
 
-sub abstract { "search among available repositories and packages" }
+sub abstract {"search among available repositories and packages"}
 
 sub description {
-"searches among available repositories and packages in the Sabayon Remote Enman Database";
+    "searches among available repositories and packages in the Sabayon Remote Enman Database";
 }
 
 sub opt_spec {
     return (
-        [
-            "package|P",
-"search among available packages in the Sabayon Community Repositories infrastructure"
+        [   "package|P",
+            "search among available packages in the Sabayon Community Repositories infrastructure"
         ],
         [ "quiet|q", "Quiet output" ],
     );
@@ -35,7 +34,7 @@ sub execute {
     App::enman->instance->loglevel("quiet") if $opt->{quiet};
     my $query = join( "", @{$args} );
     $self->usage_error("print help")
-      if ( $query eq "--help" or $query eq "-h" );
+        if ( $query eq "--help" or $query eq "-h" );
     $opt->{package} ? package_search($query) : repository_search($query);
 
 }
@@ -43,27 +42,25 @@ sub execute {
 sub package_search() {
     my $query = join( "", @_ );
     App::enman->instance->info(
-        __x(
-            "Searching '{query}' package on the Enman db...", query => $query
+        __x("Searching '{query}' package on the Enman db...",
+            query => $query
         )
     ) if App::enman->instance->loglevel ne "quiet";
     my @matches = &pkg_search($query);
     App::enman->instance->fatal(
         __x( "No matches for '{query}'", query => $query ) )
-      if @matches == 0;
+        if @matches == 0;
     App::enman->instance->notice(
-        __x(
-            "{matches} results for {query}",
+        __x("{matches} results for {query}",
             matches => scalar(@matches),
             query   => $query
         )
     ) if App::enman->instance->loglevel ne "quiet";
     App::enman->instance->notice( "=" x 6 )
-      if App::enman->instance->loglevel ne "quiet";
+        if App::enman->instance->loglevel ne "quiet";
     foreach my $match (@matches) {
         App::enman->instance->notice(
-            __x(
-                "{package} - repository: {repository} ({arch})",
+            __x("{package} - repository: {repository} ({arch})",
                 repository => $match->[0],
                 package    => $match->[1],
                 arch       => $match->[2]
@@ -76,36 +73,36 @@ sub repository_search() {
     my $query = join( "", @_ );
     if ( $query ne "" ) {
         App::enman->instance->info(
-            __x( "Searching '{query}' on the Enman Database", query => $query )
+            __x("Searching '{query}' on the Enman Database",
+                query => $query
+            )
         ) if App::enman->instance->loglevel ne "quiet";
     }
     else {
         App::enman->instance->info(
             __x("Listing all repositories available remotely") )
-          if App::enman->instance->loglevel ne "quiet";
+            if App::enman->instance->loglevel ne "quiet";
     }
 
     my @matches = &db_search($query);
     App::enman->instance->fatal(
         __x( "No matches for '{query}'", query => $query ) )
-      if @matches == 0;
+        if @matches == 0;
     App::enman->instance->notice(
-        __x(
-            "{matches} results for {query}",
+        __x("{matches} results for {query}",
             matches => scalar(@matches),
             query   => $query
         )
     ) if ( $query ne "" );
     App::enman->instance->notice( "=" x 6 )
-      if App::enman->instance->loglevel ne "quiet";
+        if App::enman->instance->loglevel ne "quiet";
     foreach my $match (@matches) {
         if ( App::enman->instance->loglevel eq "quiet" ) {
             App::enman->instance->info( $match->[0] );
         }
         else {
             App::enman->instance->notice(
-                __x(
-                    "Repository: {repository} - \"{description}\"",
+                __x("Repository: {repository} - \"{description}\"",
                     repository  => $match->[0],
                     description => $match->[1]
                 )
