@@ -12,7 +12,20 @@ is( &App::enman::Command::add::is_url(
     1,
     "is url works"
 );
+
+is( &App::enman::Command::add::is_url(
+        "http://127.0.0.1/8220428241425820618/science"),
+    1,
+    "is url works"
+);
+
 is( &App::enman::Command::add::is_url("google.com"), 0, "is url works" );
+is( &App::enman::Command::add::is_url("science"),    0, "is url works" );
+is( &App::enman::Command::add::is_url("devel"),      0, "is url works" );
+is( &App::enman::Command::add::is_url("our-internal-test"),
+    0, "is url works" );
+is( &App::enman::Command::add::is_url("foo:bar:baz"), 0, "is url works" );
+
 is( &App::enman::Command::add::normalize("http://google.com"),
     "google-com", "normalize works" );
 is( &App::enman::Command::add::normalize("https://google.com"),
@@ -25,6 +38,12 @@ is( &App::enman::Command::add::last_path("http://foo.com/b"),
     "b", "normalize works" );
 is( &App::enman::Command::add::last_path(
         "https://bar.com/last/last/path/of/url"),
+    "url",
+    "normalize works"
+);
+
+is( &App::enman::Command::add::last_path(
+        "https://127.0.0.1/last/last/path/of/url"),
     "url",
     "normalize works"
 );

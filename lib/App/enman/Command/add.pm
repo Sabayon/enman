@@ -111,8 +111,7 @@ sub last_path {
 }
 
 sub is_url {
-    shift
-        =~ /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,10}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/i
+    shift =~ /https?:\/\/(www\.)?/i
         ? 1
         : 0;
 }
