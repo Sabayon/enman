@@ -9,7 +9,7 @@ use constant ETPREPO_DIR => $ENV{ETPREPO_DIR}
 use constant ENMAN_DB => $ENV{ENMAN_DB}
     || "https://raw.githubusercontent.com/Sabayon/enman-db/master/enman.db";
 use constant METADATA_DB => $ENV{METADATA_DB}
-    || "http://mirror.de.sabayon.org/community/metadata.json";
+    || "http://dl.sabayon.org/sbi/metadata/metadata.json";
 use constant ESUFFIX   => "entropy_";
 use constant ETPSUFFIX => ESUFFIX() . "enman_";
 our $VERSION = "1.3.8";
