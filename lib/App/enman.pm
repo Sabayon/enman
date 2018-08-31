@@ -12,7 +12,7 @@ use constant METADATA_DB => $ENV{METADATA_DB}
     || "http://dl.sabayon.org/sbi/metadata/metadata.json";
 use constant ESUFFIX   => "entropy_";
 use constant ETPSUFFIX => ESUFFIX() . "enman_";
-our $VERSION = "1.3.9";
+our $VERSION = "1.4.0";
 my $singleton;
 use Term::ANSIColor;
 use Encode;
