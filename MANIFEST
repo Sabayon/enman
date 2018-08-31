@@ -14,7 +14,6 @@ cpanfile
 dist.ini
 inc/Module/Build/enman.pm
 lib/App/enman.pm
-lib/App/enman.pm.bak
 lib/App/enman/Command/add.pm
 lib/App/enman/Command/list.pm
 lib/App/enman/Command/remove.pm

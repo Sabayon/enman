@@ -83,6 +83,8 @@ sub execute {
 # args: url [name]
 sub add_single {
     my ( $url, $name ) = @_;
+    $url = substr( $url, 0, length($url) - 1 )
+        unless substr( $url, -1 ) cmp "/";
     my $normal = $name // last_path($url);
     my $dest = App::enman::ETPREPO_DIR() . App::enman::ETPSUFFIX() . $normal;
     return App::enman->instance->info(
